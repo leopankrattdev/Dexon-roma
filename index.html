@@ -31,7 +31,7 @@
             <div class="lang-dropdown">
                 <button class="lang-btn" onclick="toggleLangMenu()">
                     <i class="fa-solid fa-globe"></i>
-                    <span id="current-lang-code">RU</span>
+                    <span id="current-lang-code">EN</span>
                     <i class="fa-solid fa-chevron-down text-xs"></i>
                 </button>
                 <div class="lang-menu" id="lang-menu">
@@ -434,13 +434,13 @@
                     <!-- STEP 1 -->
                     <div class="modal-step active" id="step-1">
                         <div class="form-group">
-                            <label data-i18n="lbl_room_type">Категория Номера</label>
-                            <select class="form-control" id="modal-room" onchange="calculateModalTotal()">
-                                <option value="Standard Room" data-price="45" data-i18n="opt_room_std">Standard Room ($45 / ночь)</option>
-                                <option value="Superior Sea View" data-price="65" data-i18n="opt_room_sup">Superior Sea View ($65 / ночь)</option>
-                                <option value="Family Suite" data-price="95" data-i18n="opt_room_fam">Family Suite ($95 / ночь)</option>
-                            </select>
-                        </div>
+    <label data-i18n="lbl_room_type">Категория Номера</label>
+    <select class="form-control" id="modal-room" onchange="calculateModalTotal()">
+        <option value="Standard Room" data-price="45" data-i18n="opt_room_std">Standard Room ($45 / night)</option>
+        <option value="Superior Sea View" data-price="65" data-i18n="opt_room_sup">Superior Sea View ($65 / night)</option>
+        <option value="Family Suite" data-price="95" data-i18n="opt_room_fam">Family Suite ($95 / night)</option>
+    </select>
+</div>
 
                         <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
                             <div class="form-group">
@@ -481,8 +481,8 @@
 
                         <div class="price-summary-box">
                             <div style="display:flex; justify-content:space-between; margin-bottom: 0.35rem; font-size: 0.8rem;">
-                                <span>Ночей: <strong id="summary-nights">1</strong></span>
-                                <span>Тариф: <strong id="summary-rate">$45</strong></span>
+                                <span><span data-i18n="lbl_nights">Ночей</span>: <strong id="summary-nights">1</strong></span>
+                                <span><span data-i18n="lbl_rate">Тариф</span>: <strong id="summary-rate">$45</strong></span>
                             </div>
                             <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #CBD5E1; padding-top: 0.35rem;">
                                 <strong data-i18n="lbl_total">Итого:</strong>
@@ -546,7 +546,8 @@
                 footer_nav: "Навигация", footer_contacts: "Контакты", footer_newsletter: "Рассылка", footer_news_desc: "Подпишитесь на спецпредложения.",
                 modal_title: "Бронирование Номера", lbl_board: "План Питания", btn_next_step: "Далее: Данные", lbl_fullname: "Имя и Фамилия",
                 lbl_email: "Email", lbl_phone: "Телефон", lbl_total: "Итого:", btn_back: "Назад", btn_confirm: "Подтвердить",
-                msg_success_title: "Бронирование Подтверждено!", msg_success_desc: "Номер вашего бронирования:", btn_close: "Закрыть"
+                msg_success_title: "Бронирование Подтверждено!", msg_success_desc: "Номер вашего бронирования:", btn_close: "Закрыть",
+                lbl_nights: "Ночей", lbl_rate: "Тариф"
             },
             en: {
                 nav_about: "About", nav_rooms: "Rooms", nav_amenities: "Amenities", nav_location: "Location", nav_contact: "Contact",
@@ -578,7 +579,8 @@
                 footer_nav: "Navigation", footer_contacts: "Contacts", footer_newsletter: "Newsletter", footer_news_desc: "Subscribe for special rates.",
                 modal_title: "Reserve Your Room", lbl_board: "Board Plan", btn_next_step: "Next: Details", lbl_fullname: "Full Name",
                 lbl_email: "Email", lbl_phone: "Phone", lbl_total: "Total:", btn_back: "Back", btn_confirm: "Confirm Booking",
-                msg_success_title: "Booking Confirmed!", msg_success_desc: "Your reservation code:", btn_close: "Close"
+                msg_success_title: "Booking Confirmed!", msg_success_desc: "Your reservation code:", btn_close: "Close",
+                lbl_nights: "Nights", lbl_rate: "Rate"
             },
             de: {
                 nav_about: "Über uns", nav_rooms: "Zimmer", nav_amenities: "Service", nav_location: "Lage", nav_contact: "Kontakt",
@@ -610,7 +612,8 @@
                 footer_nav: "Navigation", footer_contacts: "Kontakte", footer_newsletter: "Newsletter", footer_news_desc: "Exklusive Angebote erhalten.",
                 modal_title: "Zimmer Reservieren", lbl_board: "Verpflegung", btn_next_step: "Weiter: Details", lbl_fullname: "Vollständiger Name",
                 lbl_email: "Email", lbl_phone: "Telefon", lbl_total: "Gesamt:", btn_back: "Zurück", btn_confirm: "Bestätigen",
-                msg_success_title: "Buchung Bestätigt!", msg_success_desc: "Ihr Reservierungscode:", btn_close: "Schließen"
+                msg_success_title: "Buchung Bestätigt!", msg_success_desc: "Ihr Reservierungscode:", btn_close: "Schließen",
+                lbl_nights: "Nächte", lbl_rate: "Rate"
             },
             ar: {
                 nav_about: "عن الفندق", nav_rooms: "الغرف", nav_amenities: "الخدمات", nav_location: "الموقع", nav_contact: "اتصل بنا",
@@ -642,9 +645,12 @@
                 footer_nav: "التنقل", footer_contacts: "التواصل", footer_newsletter: "النشرة البريدية", footer_news_desc: "اشترك للحصول على خصومات.",
                 modal_title: "حجز غرفة", lbl_board: "خطة الوجبات", btn_next_step: "التالي: التفاصيل", lbl_fullname: "الاسم بالكامل",
                 lbl_email: "البريد الإلكتروني", lbl_phone: "رقم الهاتف", lbl_total: "الإجمالي:", btn_back: "رجوع", btn_confirm: "تأكيد الحجز",
-                msg_success_title: "تم تأكيد الحجز!", msg_success_desc: "رمز الحجز الخاص بك:", btn_close: "إغلاق"
+                msg_success_title: "تم تأكيد الحجز!", msg_success_desc: "رمز الحجز الخاص بك:", btn_close: "إغلاق",
+                lbl_nights: "الليالي", lbl_rate: "السعر"
             }
         };
+
+
 
 
         // Переключение мобильного меню
@@ -759,7 +765,11 @@
             goToStep(3);
         }
 
-        window.addEventListener('DOMContentLoaded', setupDefaultDates);
+        // Устанавливаем английский язык основным при загрузке страницы
+        window.addEventListener('DOMContentLoaded', () => {
+            setupDefaultDates();
+            setLanguage('en');
+        });
     </script>
 </body>
 </html>
