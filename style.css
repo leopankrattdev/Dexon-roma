@@ -1260,3 +1260,27 @@ h1, h2, h3, .font-serif-title {
   height: 100%;
   box-sizing: border-box;
 }
+
+/* Жесткая изоляция сетки и полей дат в модальном окне для мобильных */
+.modal-step div[style*="grid-template-columns"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 6px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.modal-step div[style*="grid-template-columns"] > .form-group {
+  min-width: 0 !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.modal-step input[type="date"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 0 2px !important;
+  font-size: 0.75rem !important;
+}
