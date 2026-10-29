@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>DEXON Roma Hotel | Red Sea Resort & Spa Hurghada</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP CONTACT BAR -->
+    <div class="top-bar">
+        <div class="container flex-wrapper">
+            <ul class="contact-info-list">
+                <li><a href="tel:+20653443311"><i class="fa-solid fa-phone text-gold"></i> +20 65 344 3311</a></li>
+                <li class="hide-mobile"><a href="mailto:info@dexonhotels.com"><i class="fa-solid fa-envelope text-gold"></i> info@dexonhotels.com</a></li>
+            </ul>
+            
+            <div class="lang-dropdown">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="current-lang-code">RU</span>
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+                <div class="lang-menu" id="lang-menu">
+                    <button class="lang-option" onclick="setLanguage('ru')"><span>Русский</span> <span>RU</span></button>
+                    <button class="lang-option" onclick="setLanguage('en')"><span>English</span> <span>EN</span></button>
+                    <button class="lang-option" onclick="setLanguage('de')"><span>Deutsch</span> <span>DE</span></button>
+                    <button class="lang-option" onclick="setLanguage('ar')"><span>العربية</span> <span>AR</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar glass-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-crown"></i></div>
+                <div class="logo-text-box">
+                    <span class="logo-title">DEXON</span>
+                    <span class="logo-sub">Roma Hotel • Hurghada</span>
+                </div>
+            </a>
+
+            <!-- Десктопные ссылки -->
+            <ul class="nav-links hide-mobile">
+                <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+                <li><a href="#rooms" data-i18n="nav_rooms">Номера</a></li>
+                <li><a href="#amenities" data-i18n="nav_amenities">Услуги</a></li>
+                <li><a href="#location" data-i18n="nav_location">Локация</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+            </ul>
+
+            <button class="btn btn-gold hide-mobile" onclick="openBookingModal()" data-i18n="btn_book_now">Забронировать</button>
+            
+            <!-- Мобильная кнопка Бургер -->
+            <button class="mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ВЫПЛЫВАЮЩАЯ ШТОРКА МОБИЛЬНОГО МЕНЮ -->
+    <div class="mobile-drawer-overlay" id="drawer-overlay" onclick="toggleMobileDrawer()"></div>
+    <aside class="mobile-drawer" id="mobile-drawer">
+        <div>
+            <button class="drawer-close" onclick="toggleMobileDrawer()">&times;</button>
+            <ul class="drawer-links">
+                <li><a href="#about" onclick="toggleMobileDrawer()"><i class="fa-solid fa-hotel text-gold"></i> <span data-i18n="nav_about">О нас</span></a></li>
+                <li><a href="#rooms" onclick="toggleMobileDrawer()"><i class="fa-solid fa-bed text-gold"></i> <span data-i18n="nav_rooms">Номера</span></a></li>
+                <li><a href="#amenities" onclick="toggleMobileDrawer()"><i class="fa-solid fa-concierge-bell text-gold"></i> <span data-i18n="nav_amenities">Услуги</span></a></li>
+                <li><a href="#location" onclick="toggleMobileDrawer()"><i class="fa-solid fa-map-location-dot text-gold"></i> <span data-i18n="nav_location">Локация</span></a></li>
+                <li><a href="#contact" onclick="toggleMobileDrawer()"><i class="fa-solid fa-envelope text-gold"></i> <span data-i18n="nav_contact">Контакты</span></a></li>
+            </ul>
+        </div>
+        <button class="btn btn-gold" style="width:100%" onclick="toggleMobileDrawer(); openBookingModal();" data-i18n="btn_book_now">Забронировать</button>
+    </aside>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-badge" data-i18n="hero_badge">
+                <i class="fa-solid fa-star"></i> Hurghada • Red Sea Beach Resort
+            </div>
+            <h1 class="hero-title">
+                <span data-i18n="hero_title_1">Ваш Тропический Оазис на</span> <br>
+                <span class="gold-gradient-text" data-i18n="hero_title_2">Красном Море</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                Роскошный отдых в DEXON Roma Hotel: собственный пляж, открытый бассейн, спа-центр и египетское гостеприимство на улице Шератон.
+            </p>
+
+            <!-- BOOKING WIDGET -->
+            <div class="booking-widget-wrapper">
+                <div class="glass-card booking-widget">
+                    <div class="widget-field">
+                        <label data-i18n="lbl_checkin"><i class="fa-regular fa-calendar"></i> Заезд</label>
+                        <input type="date" id="hero-checkin">
+                    </div>
+                    <div class="widget-field">
+                        <label data-i18n="lbl_checkout"><i class="fa-regular fa-calendar"></i> Выезд</label>
+                        <input type="date" id="hero-checkout">
+                    </div>
+                    <div class="widget-field">
+                        <label data-i18n="lbl_guests"><i class="fa-solid fa-users"></i> Гости</label>
+                        <div class="select-wrapper">
+                            <select id="hero-guests">
+                                <option value="1">1 Взрослый</option>
+                                <option value="2" selected>2 Взрослых</option>
+                                <option value="3">3 Взрослых</option>
+                                <option value="4">2 Взрослых + 2 Детей</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="widget-field">
+                        <label data-i18n="lbl_room_type"><i class="fa-solid fa-bed"></i> Категория</label>
+                        <div class="select-wrapper">
+                            <select id="hero-room">
+                                <option value="Standard Room">Standard Room</option>
+                                <option value="Superior Sea View">Superior Sea View</option>
+                                <option value="Family Suite">Family Suite</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-gold bk2" onclick="triggerWidgetBooking()" data-i18n="btn_check_rates">Найти Номер</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-stack">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="DEXON Roma Resort Pool" class="main-img">
+                    <div class="glass-dark floating-badge-card">
+                        <div style="display:flex; align-items:center; gap: 0.85rem;">
+                            <i class="fa-solid fa-umbrella-beach text-gold" style="font-size: 1.75rem;"></i>
+                            <div>
+                                <h4 style="font-size: 0.85rem;" data-i18n="about_badge_title">Частный Пляж</h4>
+                                <p style="font-size: 0.7rem; color: rgba(255,255,255,0.7);" data-i18n="about_badge_desc">Прямой доступ к морю и песчаный берег</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="section-tag" data-i18n="about_tag">Добро пожаловать в Хургаду</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">
+                        <span data-i18n="about_title_1">Идеальное Расположение на</span> <br>
+                        <span class="gold-gradient-text" data-i18n="about_title_2">Sheraton Road</span>
+                    </h2>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="about_desc_1">
+                        Отель DEXON Roma расположен в самом центре Хургады, всего в нескольких шагах от проспекта Шератон, живописной марины с яхтами и лучших городских развлечений.
+                    </p>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;" data-i18n="about_desc_2">
+                        Отель идеально сочетает динамику курортного города с умиротворяющей атмосферой пляжного отдыха. Гостей ждут уютные номера, бассейн с подогревом и гастрономическое разнообразие.
+                    </p>
+                    <button class="btn btn-navy" onclick="openBookingModal()" data-i18n="btn_explore_more">Узнать Номера</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BANNER -->
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label" data-i18n="stat_rooms">Уютных Номеров</div>
+                </div>
+                <div>
+                    <div class="stat-number">100m</div>
+                    <div class="stat-label" data-i18n="stat_beach">До Собственного Пляжа</div>
+                </div>
+                <div>
+                    <div class="stat-number">4★</div>
+                    <div class="stat-label" data-i18n="stat_stars">Премиум Сервис</div>
+                </div>
+                <div>
+                    <div class="stat-number">15 min</div>
+                    <div class="stat-label" data-i18n="stat_airport">От Аэропорта HRG</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROOM CATALOG SECTION -->
+    <section id="rooms" class="section-padding" style="background: var(--color-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="rooms_subtitle">Комфорт и Элегантность</span>
+                <h2 class="section-title" data-i18n="rooms_title">Номера и Люксы</h2>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterRooms('all', this)" data-i18n="filter_all">Все Номера</button>
+                <button class="filter-btn" onclick="filterRooms('standard', this)" data-i18n="filter_standard">Стандарт</button>
+                <button class="filter-btn" onclick="filterRooms('superior', this)" data-i18n="filter_superior">Супериор Вид на Море</button>
+                <button class="filter-btn" onclick="filterRooms('family', this)" data-i18n="filter_family">Семейный Люкс</button>
+            </div>
+
+            <div class="rooms-grid">
+                <div class="room-card" data-category="standard">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Standard Room" class="room-img">
+                        <span class="price-badge">$45 / ночь</span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Standard Room</h3>
+                        <p class="room-desc" data-i18n="room_std_desc">Уютный номер с кондиционером, балкон с видом на город или внутренний сад отеля.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-vector-square text-gold"></i> 28 м²</span>
+                            <span><i class="fa-solid fa-user text-gold"></i> 2 Гостя</span>
+                            <span><i class="fa-solid fa-wifi text-gold"></i> Wi-Fi</span>
+                        </div>
+                        <button class="btn btn-navy" onclick="quickBookRoom('Standard Room', 45)" data-i18n="btn_book_room">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="room-card" data-category="superior">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Superior Sea View" class="room-img">
+                        <span class="price-badge">$65 / ночь</span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Superior Sea View</h3>
+                        <p class="room-desc" data-i18n="room_sup_desc">Панорамный вид на Красное море, просторный балкон и улучшенные удобства.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-vector-square text-gold"></i> 36 м²</span>
+                            <span><i class="fa-solid fa-water text-gold"></i> Вид на море</span>
+                            <span><i class="fa-solid fa-wine-glass text-gold"></i> Мини-бар</span>
+                        </div>
+                        <button class="btn btn-navy" onclick="quickBookRoom('Superior Sea View', 65)" data-i18n="btn_book_room">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="room-card" data-category="family">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Family Suite" class="room-img">
+                        <span class="price-badge">$95 / ночь</span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Family Suite</h3>
+                        <p class="room-desc" data-i18n="room_fam_desc">Просторный двухкомнатный номер, идеальный для семейного отдыха с детьми.</p>
+                        <div class="room-amenities-icons">
+                            <span><i class="fa-solid fa-vector-square text-gold"></i> 54 м²</span>
+                            <span><i class="fa-solid fa-users text-gold"></i> 4 Гостя</span>
+                            <span><i class="fa-solid fa-tv text-gold"></i> Smart TV</span>
+                        </div>
+                        <button class="btn btn-navy" onclick="quickBookRoom('Family Suite', 95)" data-i18n="btn_book_room">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMENITIES SECTION -->
+    <section id="amenities" class="section-padding amenities-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" style="color: var(--color-gold);" data-i18n="amenities_subtitle">Все Для Идеального Отдыха</span>
+                <h2 class="section-title" style="color: var(--color-white);" data-i18n="amenities_title">Услуги и Развлечения</h2>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="glass-dark amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.35rem;" data-i18n="am_1_title">Частный Пляж</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);" data-i18n="am_1_desc">Собственный песчаный пляж с шезлонгами, зонтиками и безопасным входом в море.</p>
+                </div>
+
+                <div class="glass-dark amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-water-ladder"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.35rem;" data-i18n="am_2_title">Бассейн с Подогревом</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);" data-i18n="am_2_desc">Открытый бассейн с комфортной температурой воды в зимний период и аква-баром.</p>
+                </div>
+
+                <div class="glass-dark amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.35rem;" data-i18n="am_3_title">Дайвинг Центр</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);" data-i18n="am_3_desc">Погружения к коралловым рифам Красного моря с сертифицированными инструкторами.</p>
+                </div>
+
+                <div class="glass-dark amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.35rem;" data-i18n="am_4_title">All-Inclusive Ресторан</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);" data-i18n="am_4_desc">Шведский стол с блюдами международной и традиционной египетской кухни.</p>
+                </div>
+
+                <div class="glass-dark amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.35rem;" data-i18n="am_5_title">СПА & Сауна</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);" data-i18n="am_5_desc">Оздоровительные программы, тайский и восточный массаж, турецкий хаммам.</p>
+                </div>
+
+                <div class="glass-dark amenity-card">
+                    <div class="amenity-icon"><i class="fa-solid fa-wifi"></i></div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.35rem;" data-i18n="am_6_title">Высокоскоростной Wi-Fi</h3>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);" data-i18n="am_6_desc">Бесплатный доступ к интернету в лобби и публичных зонах отеля.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & MAP SECTION -->
+    <section id="location" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="location_subtitle">Сердце Курорта</span>
+                <h2 class="section-title" data-i18n="location_title">Расположение и Карта</h2>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-info-card">
+                    <div>
+                        <h3 class="font-serif-title" style="color: var(--color-gold); font-size: 1.35rem; margin-bottom: 0.75rem;">DEXON Roma Hotel</h3>
+                        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem;">
+                            <i class="fa-solid fa-location-dot text-gold"></i> Sheraton Road, Sakalla, Hurghada, Red Sea, Egypt
+                        </p>
+                        
+                        <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.8rem;">
+                            <div><strong><i class="fa-solid fa-plane text-gold"></i> Аэропорт:</strong> 10-15 минут</div>
+                            <div><strong><i class="fa-solid fa-ship text-gold"></i> Hurghada Marina:</strong> 3 минуты</div>
+                            <div><strong><i class="fa-solid fa-store text-gold"></i> Рынок Сакалла:</strong> В пешей доступности</div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/place/DEXON+Roma+Hotel" target="_blank" class="btn btn-gold" style="margin-top: 1.5rem;" data-i18n="btn_open_gmaps">Открыть в Google Maps</a>
+                </div>
+
+                <iframe 
+                    class="map-frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.842792625203!2d33.8415843!3d27.2117596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14528728fed08a07%3A0x28e3b01840c1d4f5!2sDEXON%20Roma%20Hotel!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING MOBILE QUICK-BOOK BAR -->
+    <div class="floating-mobile-bar">
+        <div>
+            <div style="color:var(--color-white); font-weight:700; font-size:0.9rem;">DEXON Roma</div>
+            <div style="color:var(--color-gold); font-size:0.7rem;">от $45 / ночь</div>
+        </div>
+        <button class="btn btn-gold" style="min-height: 40px; padding: 0.5rem 1.25rem;" onclick="openBookingModal()" data-i18n="btn_book_now">Забронировать</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="font-serif-title" style="color:var(--color-white); margin-bottom: 0.75rem;">DEXON ROMA HOTEL</h3>
+                    <p style="margin-bottom: 1rem; font-size:0.8rem;" data-i18n="footer_about">Ваш идеальный отдых на побережье Красного моря с комфортом и премиальным сервисом.</p>
+                    <div style="display:flex; gap: 1rem; color: var(--color-gold); font-size:1.1rem;">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color:var(--color-white); margin-bottom:0.75rem;" data-i18n="footer_nav">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+                        <li><a href="#rooms" data-i18n="nav_rooms">Номера</a></li>
+                        <li><a href="#amenities" data-i18n="nav_amenities">Услуги</a></li>
+                        <li><a href="#location" data-i18n="nav_location">Локация</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:var(--color-white); margin-bottom:0.75rem;" data-i18n="footer_contacts">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>+20 65 344 3311</li>
+                        <li>info@dexonhotels.com</li>
+                        <li>Sheraton Rd, Hurghada</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color:var(--color-white); margin-bottom:0.75rem;" data-i18n="footer_newsletter">Рассылка</h4>
+                    <p style="margin-bottom: 0.75rem; font-size:0.8rem;" data-i18n="footer_news_desc">Подпишитесь на спецпредложения.</p>
+                    <div style="display:flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email" class="form-control" style="border-radius: var(--radius-full);">
+                        <button class="btn btn-gold" style="padding: 0.5rem 1rem; min-height:44px;"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; font-size:0.75rem;">
+                © 2026 DEXON Roma Hotel. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="font-serif-title" style="color: var(--color-gold); font-size:1.15rem;" data-i18n="modal_title">Бронирование Номера</h3>
+                <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="step-progress">
+                    <div class="step-dot active" id="dot-1">1</div>
+                    <div class="step-dot" id="dot-2">2</div>
+                    <div class="step-dot" id="dot-3">3</div>
+                </div>
+
+                <form id="multi-step-form" onsubmit="handleFormSubmit(event)">
+                    <!-- STEP 1 -->
+                    <div class="modal-step active" id="step-1">
+                        <div class="form-group">
+                            <label data-i18n="lbl_room_type">Категория Номера</label>
+                            <select class="form-control" id="modal-room" onchange="calculateModalTotal()">
+                                <option value="Standard Room" data-price="45">Standard Room ($45 / ночь)</option>
+                                <option value="Superior Sea View" data-price="65">Superior Sea View ($65 / ночь)</option>
+                                <option value="Family Suite" data-price="95">Family Suite ($95 / ночь)</option>
+                            </select>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                            <div class="form-group">
+                                <label data-i18n="lbl_checkin">Заезд</label>
+                                <input type="date" class="form-control" id="modal-checkin" onchange="calculateModalTotal()" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_checkout">Выезд</label>
+                                <input type="date" class="form-control" id="modal-checkout" onchange="calculateModalTotal()" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-i18n="lbl_board">План Питания</label>
+                            <select class="form-control" id="modal-board" onchange="calculateModalTotal()">
+                                <option value="All Inclusive" data-extra="15">All Inclusive (+ $15/день)</option>
+                                <option value="Half Board" data-extra="0">Half Board (Завтрак/Ужин)</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-gold" style="width: 100%; margin-top: 0.5rem;" onclick="goToStep(2)" data-i18n="btn_next_step">Далее: Данные</button>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="modal-step" id="step-2">
+                        <div class="form-group">
+                            <label data-i18n="lbl_fullname">Имя и Фамилия</label>
+                            <input type="text" class="form-control" id="guest-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="lbl_email">Email</label>
+                            <input type="email" class="form-control" id="guest-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="lbl_phone">Телефон</label>
+                            <input type="tel" class="form-control" id="guest-phone" placeholder="+7..." required>
+                        </div>
+
+                        <div class="price-summary-box">
+                            <div style="display:flex; justify-content:space-between; margin-bottom: 0.35rem; font-size: 0.8rem;">
+                                <span>Ночей: <strong id="summary-nights">1</strong></span>
+                                <span>Тариф: <strong id="summary-rate">$45</strong></span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #CBD5E1; padding-top: 0.35rem;">
+                                <strong data-i18n="lbl_total">Итого:</strong>
+                                <span style="font-size: 1.35rem; font-weight: 700; color: var(--color-navy);" id="summary-total">$60</span>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap: 0.75rem;">
+                            <button type="button" class="btn btn-outline" style="width: 50%;" onclick="goToStep(1)" data-i18n="btn_back">Назад</button>
+                            <button type="submit" class="btn btn-gold" style="width: 50%;" data-i18n="btn_confirm">Подтвердить</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="modal-step" id="step-3">
+                        <div style="text-align: center; padding: 1rem 0;">
+                            <i class="fa-solid fa-circle-check text-gold" style="font-size: 3rem; margin-bottom: 0.75rem;"></i>
+                            <h3 class="font-serif-title" style="color: var(--color-navy); margin-bottom: 0.35rem;" data-i18n="msg_success_title">Бронирование Подтверждено!</h3>
+                            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 1rem;" data-i18n="msg_success_desc">Номер вашего бронирования:</p>
+                            <div style="background: var(--color-sand); padding: 0.65rem; font-weight:700; font-size: 1.15rem; letter-spacing: 0.1em; color: var(--color-navy); border-radius: var(--radius-sm); margin-bottom: 1.25rem;" id="res-code">
+                                DX-84920
+                            </div>
+                            <button type="button" class="btn btn-navy" onclick="closeBookingModal()" data-i18n="btn_close">Закрыть</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT ENGINE -->
+    <script>
+        const i18n = {
+            ru: {
+                nav_about: "О нас", nav_rooms: "Номера", nav_amenities: "Услуги", nav_location: "Локация", nav_contact: "Контакты",
+                btn_book_now: "Забронировать", hero_badge: "Hurghada • Red Sea Beach Resort",
+                hero_title_1: "Ваш Тропический Оазис на", hero_title_2: "Красном Море",
+                hero_subtitle: "Роскошный отдых в DEXON Roma Hotel: собственный пляж, открытый бассейн, спа-центр и египетское гостеприимство на улице Шератон.",
+                lbl_checkin: "Заезд", lbl_checkout: "Выезд", lbl_guests: "Гости", lbl_room_type: "Категория", btn_check_rates: "Найти Номер",
+                about_tag: "Добро пожаловать в Хургаду", about_title_1: "Идеальное Расположение на", about_title_2: "Sheraton Road",
+                about_desc_1: "Отель DEXON Roma расположен в самом центре Хургады, всего в нескольких шагах от проспекта Шератон, живописной марины с яхтами и лучших городских развлечений.",
+                about_desc_2: "Отель идеально сочетает динамику курортного города с умиротворяющей атмосферой пляжного отдыха. Гостей ждут уютные номера, бассейн с подогревом и гастрономическое разнообразие.",
+                about_badge_title: "Частный Пляж", about_badge_desc: "Прямой доступ к морю и песчаный берег", btn_explore_more: "Узнать Номера",
+                stat_rooms: "Уютных Номеров", stat_beach: "До Собственного Пляжа", stat_stars: "Премиум Сервис", stat_airport: "От Аэропорта HRG",
+                rooms_subtitle: "Комфорт и Элегантность", rooms_title: "Номера и Люксы",
+                filter_all: "Все Номера", filter_standard: "Стандарт", filter_superior: "Супериор Вид на Море", filter_family: "Семейный Люкс",
+                room_std_desc: "Уютный номер с кондиционером, балкон с видом на город или внутренний сад отеля.",
+                room_sup_desc: "Панорамный вид на Красное море, просторный балкон и улучшенные удобства.",
+                room_fam_desc: "Просторный двухкомнатный номер, идеальный для семейного отдыха с детьми.",
+                btn_book_room: "Забронировать", amenities_subtitle: "Все Для Идеального Отдыха", amenities_title: "Услуги и Развлечения",
+                am_1_title: "Частный Пляж", am_1_desc: "Собственный песчаный пляж с шезлонгами, зонтиками и безопасным входом в море.",
+                am_2_title: "Бассейн с Подогревом", am_2_desc: "Открытый бассейн с комфортной температурой воды в зимний период и аква-баром.",
+                am_3_title: "Дайвинг Центр", am_3_desc: "Погружения к коралловым рифам Красного моря с сертифицированными инструкторами.",
+                am_4_title: "All-Inclusive Ресторан", am_4_desc: "Шведский стол с блюдами международной и традиционной египетской кухни.",
+                am_5_title: "СПА & Сауна", am_5_desc: "Оздоровительные программы, тайский и восточный массаж, турецкий хаммам.",
+                am_6_title: "Высокоскоростной Wi-Fi", am_6_desc: "Бесплатный доступ к интернету в лобби и публичных зонах отеля.",
+                location_subtitle: "Сердце Курорта", location_title: "Расположение и Карта", btn_open_gmaps: "Открыть в Google Maps",
+                footer_about: "Ваш идеальный отдых на побережье Красного моря с комфортом и премиальным сервисом.",
+                footer_nav: "Навигация", footer_contacts: "Контакты", footer_newsletter: "Рассылка", footer_news_desc: "Подпишитесь на спецпредложения.",
+                modal_title: "Бронирование Номера", lbl_board: "План Питания", btn_next_step: "Далее: Данные", lbl_fullname: "Имя и Фамилия",
+                lbl_email: "Email", lbl_phone: "Телефон", lbl_total: "Итого:", btn_back: "Назад", btn_confirm: "Подтвердить",
+                msg_success_title: "Бронирование Подтверждено!", msg_success_desc: "Номер вашего бронирования:", btn_close: "Закрыть"
+            },
+            en: {
+                nav_about: "About", nav_rooms: "Rooms", nav_amenities: "Amenities", nav_location: "Location", nav_contact: "Contact",
+                btn_book_now: "Book Now", hero_badge: "Hurghada • Red Sea Beach Resort",
+                hero_title_1: "Your Tropical Oasis on the", hero_title_2: "Red Sea Coast",
+                hero_subtitle: "Experience luxury at DEXON Roma Hotel: private beach, heated pool, spa center, and Egyptian hospitality on Sheraton Road.",
+                lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Guests", lbl_room_type: "Category", btn_check_rates: "Find Room",
+                about_tag: "Welcome to Hurghada", about_title_1: "Prime Location on", about_title_2: "Sheraton Road",
+                about_desc_1: "DEXON Roma Hotel is situated right in the center of Hurghada, steps from bustling Sheraton Road and Hurghada Marina.",
+                about_desc_2: "We offer the ideal balance between vibrant city exploration and relaxing beach vacation.",
+                about_badge_title: "Private Beach", about_badge_desc: "Direct sea access and sandy shoreline", btn_explore_more: "Explore Rooms",
+                stat_rooms: "Cozy Rooms", stat_beach: "To Private Beach", stat_stars: "Premium Service", stat_airport: "From Airport HRG",
+                rooms_subtitle: "Comfort & Elegance", rooms_title: "Rooms & Suites Showcase",
+                filter_all: "All Rooms", filter_standard: "Standard", filter_superior: "Superior Sea View", filter_family: "Family Suite",
+                room_std_desc: "Cozy room with air conditioning, satellite TV, and private balcony overlooking garden or city.",
+                room_sup_desc: "Panoramic views of the Red Sea, spacious balcony, and upgraded room amenities.",
+                room_fam_desc: "Two separate bedrooms, perfect setup for families holidaying with children.",
+                btn_book_room: "Book This Room", amenities_subtitle: "Everything For Your Comfort", amenities_title: "Amenities & Services",
+                am_1_title: "Private Beach", am_1_desc: "Pristine private beach area with sun loungers and crystal-clear swimming spots.",
+                am_2_title: "Heated Pool", am_2_desc: "Temperature-controlled swimming pool with sunbeds and swim-up bar.",
+                am_3_title: "Diving Center", am_3_desc: "On-site diving center providing equipment rental and coral reef excursions.",
+                am_4_title: "All-Inclusive Dining", am_4_desc: "Rich buffet spreads featuring international and Egyptian specialties.",
+                am_5_title: "Spa & Wellness", am_5_desc: "Sauna, steam rooms, Turkish bath, and relaxing massage packages.",
+                am_6_title: "High-Speed Wi-Fi", am_6_desc: "Free wireless internet access in lobby and public resort areas.",
+                location_subtitle: "Resort Center", location_title: "Location & Map", btn_open_gmaps: "Open in Google Maps",
+                footer_about: "Your memorable resort stay on the Red Sea coast in Hurghada, Egypt.",
+                footer_nav: "Navigation", footer_contacts: "Contacts", footer_newsletter: "Newsletter", footer_news_desc: "Subscribe for special rates.",
+                modal_title: "Reserve Your Room", lbl_board: "Board Plan", btn_next_step: "Next: Details", lbl_fullname: "Full Name",
+                lbl_email: "Email", lbl_phone: "Phone", lbl_total: "Total:", btn_back: "Back", btn_confirm: "Confirm Booking",
+                msg_success_title: "Booking Confirmed!", msg_success_desc: "Your reservation code:", btn_close: "Close"
+            },
+            de: {
+                nav_about: "Über uns", nav_rooms: "Zimmer", nav_amenities: "Service", nav_location: "Lage", nav_contact: "Kontakt",
+                btn_book_now: "Buchen", hero_badge: "Hurghada • Red Sea Beach Resort",
+                hero_title_1: "Ihre Tropische Oase am", hero_title_2: "Roten Meer",
+                hero_subtitle: "Erleben Sie Luxus im DEXON Roma Hotel: Privatstrand, beheizter Pool, Spa und ägyptische Gastfreundschaft.",
+                lbl_checkin: "Anreise", lbl_checkout: "Abreise", lbl_guests: "Gäste", lbl_room_type: "Kategorie", btn_check_rates: "Suchen",
+                about_tag: "Willkommen in Hurghada", about_title_1: "Beste Lage an der", about_title_2: "Sheraton Road",
+                about_desc_1: "Das DEXON Roma Hotel liegt direkt im Zentrum von Hurghada, nur wenige Schritte von der Marina entfernt.",
+                about_desc_2: "Die perfekte Kombination aus Stadtleben und erholsamem Strandurlaub.",
+                about_badge_title: "Privatstrand", about_badge_desc: "Direkter Zugang zum Meer", btn_explore_more: "Zimmer Entdecken",
+                stat_rooms: "Gemütliche Zimmer", stat_beach: "Zum Privatstrand", stat_stars: "Sterne Service", stat_airport: "Vom Flughafen HRG",
+                rooms_subtitle: "Komfort & Eleganz", rooms_title: "Unsere Zimmer & Suiten",
+                filter_all: "Alle Zimmer", filter_standard: "Standard", filter_superior: "Superior Meerblick", filter_family: "Familien Suite",
+                room_std_desc: "Gemütliches Zimmer mit Klimaanlage, Sat-TV und Balkon mit Stadt- oder Gartenblick.",
+                room_sup_desc: "Panoramablick auf das Rote Meer, großer Balkon und gehobene Ausstattung.",
+                room_fam_desc: "Zwei separate Schlafzimmer – ideal für Familien mit Kindern.",
+                btn_book_room: "Zimmer Buchen", amenities_subtitle: "Alles Für Ihren Urlaub", amenities_title: "Einrichtungen & Service",
+                am_1_title: "Privatstrand", am_1_desc: "Sauberer Privatstrand mit sanftem Einstieg ins Meer.",
+                am_2_title: "Beheizter Pool", am_2_desc: "Erfrischender Pool mit Liegestühlen und integrierter Poolbar.",
+                am_3_title: "Tauchzentrum", am_3_desc: "Hauseigenes Tauchzentrum mit Ausrüstungsverleih und Ausflügen.",
+                am_4_title: "All-Inclusive Restaurant", am_4_desc: "Reichhaltiges Buffet mit internationalen und orientalischen Gerichten.",
+                am_5_title: "Spa & Wellness", am_5_desc: "Sauna, Dampfbad und erholsame Massageanwendungen.",
+                am_6_title: "Schnelles WLAN", am_6_desc: "Kostenloser Internetzugang in öffentlichen Bereichen.",
+                location_subtitle: "Zentrum", location_title: "Lage & Karte", btn_open_gmaps: "In Google Maps öffnen",
+                footer_about: "Ihr unvergesslicher Urlaub am Roten Meer in Hurghada.",
+                footer_nav: "Navigation", footer_contacts: "Kontakte", footer_newsletter: "Newsletter", footer_news_desc: "Exklusive Angebote erhalten.",
+                modal_title: "Zimmer Reservieren", lbl_board: "Verpflegung", btn_next_step: "Weiter: Details", lbl_fullname: "Vollständiger Name",
+                lbl_email: "Email", lbl_phone: "Telefon", lbl_total: "Gesamt:", btn_back: "Zurück", btn_confirm: "Bestätigen",
+                msg_success_title: "Buchung Bestätigt!", msg_success_desc: "Ihr Reservierungscode:", btn_close: "Schließen"
+            },
+            ar: {
+                nav_about: "عن الفندق", nav_rooms: "الغرف", nav_amenities: "الخدمات", nav_location: "الموقع", nav_contact: "اتصل بنا",
+                btn_book_now: "احجز الآن", hero_badge: "الغردقة • منتجع البحر الأحمر",
+                hero_title_1: "واحتك الاستوائية على", hero_title_2: "شاطئ البحر الأحمر",
+                hero_subtitle: "استمتع بإقامة فاخرة في فندق ديكسون روما: شاطئ خاص، مسبح دافئ، ومركز سبا في شارع الشيراتون.",
+                lbl_checkin: "الوصول", lbl_checkout: "المغادرة", lbl_guests: "الضيوف", lbl_room_type: "الفئة", btn_check_rates: "بحث",
+                about_tag: "مرحباً بكم في الغردقة", about_title_1: "موقع مميز في", about_title_2: "شارع الشيراتون",
+                about_desc_1: "يقع فندق DEXON Roma في قلب مدينة الغردقة بشارع الشيراتون الشهير بالقرب من مارينا الغردقة.",
+                about_desc_2: "نوفر المزيج المثالي بين الحياة الحضرية والعطلة الشاطئية الهادئة.",
+                about_badge_title: "شاطئ خاص", about_badge_desc: "دخول مباشر للبحر", btn_explore_more: "استكشف الغرف",
+                stat_rooms: "غرف مريحة", stat_beach: "إلى الشاطئ الخاص", stat_stars: "خدمة فاخرة", stat_airport: "من مطار الغردقة",
+                rooms_subtitle: "راحة وأناقة", rooms_title: "الغرف والأجنحة",
+                filter_all: "الكل", filter_standard: "قياسية", filter_superior: "سوبيريور مطلة على البحر", filter_family: "جناح عائلي",
+                room_std_desc: "غرفة مريحة تشتمل على تكييف، تلفزيون وشرفة مع إطلالة جميلة.",
+                room_sup_desc: "إطلالة بانورامية على البحر الأحمر مع شرفة واسعة ومستلزمات راقية.",
+                room_fam_desc: "غرفتا نوم منفصلتان، خيار مثالي للعائلات مع الأطفال.",
+                btn_book_room: "حجز الغرفة", amenities_subtitle: "كل ما تحتاجه لعطلة مثالية", amenities_title: "الخدمات والمرافق",
+                am_1_title: "شاطئ خاص", am_1_desc: "منطقة شاطئية خاصة ونظيفة مع أدوات شاطئية مجانية.",
+                am_2_title: "مسبح دافئ", am_2_desc: "حمام سباحة مفتوق مزود بكراسي استلقاء وبار يقدم المشروبات.",
+                am_3_title: "مركز غوص", am_3_desc: "مركز غوص متكامل لتأجير المعدات ورحلات استكشاف الشعاب المرجانية.",
+                am_4_title: "مطعم شامل", am_4_desc: "بوفيه غني بأشهى المأكولات العالمية والشرقية.",
+                am_5_title: "سبا وعافية", am_5_desc: "ساونا، حمام بخار، حمام تركي وجلسات مساج هادئة.",
+                am_6_title: "إنترنت سريع", am_6_desc: "إنترنت مجاني في الأماكن العامة بالفندق.",
+                location_subtitle: "قلب المنتجع", location_title: "الموقع والخريطة", btn_open_gmaps: "فتح في خرائط جوجل",
+                footer_about: "إقامتك المميزة وغير المنسية على ساحل البحر الأحمر بالغردقة.",
+                footer_nav: "التنقل", footer_contacts: "التواصل", footer_newsletter: "النشرة البريدية", footer_news_desc: "اشترك للحصول على خصومات.",
+                modal_title: "حجز غرفة", lbl_board: "خطة الوجبات", btn_next_step: "التالي: التفاصيل", lbl_fullname: "الاسم بالكامل",
+                lbl_email: "البريد الإلكتروني", lbl_phone: "رقم الهاتف", lbl_total: "الإجمالي:", btn_back: "رجوع", btn_confirm: "تأكيد الحجز",
+                msg_success_title: "تم تأكيد الحجز!", msg_success_desc: "رمز الحجز الخاص بك:", btn_close: "إغلاق"
+            }
+        };
+
+        // Переключение мобильного меню
+        function toggleMobileDrawer() {
+            document.getElementById('mobile-drawer').classList.toggle('active');
+            document.getElementById('drawer-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        function toggleLangMenu() {
+            document.getElementById('lang-menu').classList.toggle('show');
+        }
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            document.getElementById('current-lang-code').innerText = lang.toUpperCase();
+            document.getElementById('lang-menu').classList.remove('show');
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.innerText = i18n[lang][key];
+                }
+            });
+        }
+
+        function filterRooms(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.room-card').forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openBookingModal() {
+            document.getElementById('booking-modal').classList.add('open');
+            setupDefaultDates();
+            calculateModalTotal();
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.remove('open');
+            goToStep(1);
+        }
+
+        function goToStep(stepNumber) {
+            document.querySelectorAll('.modal-step').forEach(step => step.classList.remove('active'));
+            document.querySelectorAll('.step-dot').forEach(dot => dot.classList.remove('active'));
+
+            document.getElementById(`step-${stepNumber}`).classList.add('active');
+            for(let i = 1; i <= stepNumber; i++) {
+                document.getElementById(`dot-${i}`).classList.add('active');
+            }
+        }
+
+        function setupDefaultDates() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 2);
+
+            const formatDate = d => d.toISOString().split('T')[0];
+            document.getElementById('hero-checkin').value = formatDate(today);
+            document.getElementById('hero-checkout').value = formatDate(tomorrow);
+            document.getElementById('modal-checkin').value = formatDate(today);
+            document.getElementById('modal-checkout').value = formatDate(tomorrow);
+        }
+
+        function triggerWidgetBooking() {
+            const room = document.getElementById('hero-room').value;
+            document.getElementById('modal-room').value = room;
+            openBookingModal();
+        }
+
+        function quickBookRoom(roomName, price) {
+            document.getElementById('modal-room').value = roomName;
+            openBookingModal();
+        }
+
+        function calculateModalTotal() {
+            const checkin = new Date(document.getElementById('modal-checkin').value);
+            const checkout = new Date(document.getElementById('modal-checkout').value);
+            const roomSelect = document.getElementById('modal-room');
+            const boardSelect = document.getElementById('modal-board');
+
+            const basePrice = parseFloat(roomSelect.options[roomSelect.selectedIndex].getAttribute('data-price')) || 45;
+            const extraBoard = parseFloat(boardSelect.options[boardSelect.selectedIndex].getAttribute('data-extra')) || 0;
+
+            let nights = 1;
+            if (checkout > checkin) {
+                const diffTime = Math.abs(checkout - checkin);
+                nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            }
+
+            const total = nights * (basePrice + extraBoard);
+
+            document.getElementById('summary-nights').innerText = nights;
+            document.getElementById('summary-rate').innerText = `$${basePrice + extraBoard}`;
+            document.getElementById('summary-total').innerText = `$${total}`;
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const randomCode = 'DX-' + Math.floor(10000 + Math.random() * 90000);
+            document.getElementById('res-code').innerText = randomCode;
+            goToStep(3);
+        }
+
+        window.addEventListener('DOMContentLoaded', setupDefaultDates);
+    </script>
+</body>
+</html>
