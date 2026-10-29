@@ -1218,3 +1218,13 @@ h1, h2, h3, .font-serif-title {
   padding: 0 8px !important;
   font-size: 0.85rem !important;
 }
+
+/* Жесткая изоляция и адаптивность для полей дат в модалке */
+.modal-step input[type="date"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 0 4px !important;
+  font-size: 0.8rem !important;
+}
