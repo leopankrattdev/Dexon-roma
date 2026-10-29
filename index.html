@@ -361,7 +361,7 @@
     <div class="floating-mobile-bar">
         <div>
             <div style="color:var(--color-white); font-weight:700; font-size:0.9rem;">DEXON Roma</div>
-            <div style="color:var(--color-gold); font-size:0.7rem;">от $45 / ночь</div>
+            <div style="color:var(--color-gold); font-size:0.7rem;" data-i18n="float_price">from $45 / night</div>
         </div>
         <button class="btn btn-gold" style="min-height: 40px; padding: 0.5rem 1.25rem;" onclick="openBookingModal()" data-i18n="btn_book_now">Забронировать</button>
     </div>
@@ -523,6 +523,7 @@
                 hero_subtitle: "Роскошный отдых в DEXON Roma Hotel: собственный пляж, открытый бассейн, спа-центр и египетское гостеприимство на улице Шератон.",
                 lbl_checkin: "Заезд", lbl_checkout: "Выезд", lbl_guests: "Гости", lbl_room_type: "Категория", btn_check_rates: "Найти Номер",
                 opt_guest_1: "1 Взрослый", opt_guest_2: "2 Взрослых", opt_guest_3: "3 Взрослых", opt_guest_4: "2 Взрослых + 2 Детей",
+                opt_room_std: "Standard Room ($45 / ночь)", opt_room_sup: "Superior Sea View ($65 / ночь)", opt_room_fam: "Family Suite ($95 / ночь)",
                 board_all: "All Inclusive (+ $15/день)", board_half: "Half Board (Завтрак/Ужин)",
                 about_tag: "Добро пожаловать в Хургаду", about_title_1: "Идеальное Расположение на", about_title_2: "Sheraton Road",
                 about_desc_1: "Отель DEXON Roma расположен в самом центре Хургады, всего в нескольких шагах от проспекта Шератон, живописной марины с яхтами и лучших городских развлечений.",
@@ -547,7 +548,7 @@
                 modal_title: "Бронирование Номера", lbl_board: "План Питания", btn_next_step: "Далее: Данные", lbl_fullname: "Имя и Фамилия",
                 lbl_email: "Email", lbl_phone: "Телефон", lbl_total: "Итого:", btn_back: "Назад", btn_confirm: "Подтвердить",
                 msg_success_title: "Бронирование Подтверждено!", msg_success_desc: "Номер вашего бронирования:", btn_close: "Закрыть",
-                lbl_nights: "Ночей", lbl_rate: "Тариф"
+                lbl_nights: "Ночей", lbl_rate: "Тариф", float_price: "от $45 / ночь"
             },
             en: {
                 nav_about: "About", nav_rooms: "Rooms", nav_amenities: "Amenities", nav_location: "Location", nav_contact: "Contact",
@@ -556,6 +557,7 @@
                 hero_subtitle: "Experience luxury at DEXON Roma Hotel: private beach, heated pool, spa center, and Egyptian hospitality on Sheraton Road.",
                 lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Guests", lbl_room_type: "Category", btn_check_rates: "Find Room",
                 opt_guest_1: "1 Adult", opt_guest_2: "2 Adults", opt_guest_3: "3 Adults", opt_guest_4: "2 Adults + 2 Children",
+                opt_room_std: "Standard Room ($45 / night)", opt_room_sup: "Superior Sea View ($65 / night)", opt_room_fam: "Family Suite ($95 / night)",
                 board_all: "All Inclusive (+ $15/day)", board_half: "Half Board (Breakfast/Dinner)",
                 about_tag: "Welcome to Hurghada", about_title_1: "Prime Location on", about_title_2: "Sheraton Road",
                 about_desc_1: "DEXON Roma Hotel is situated right in the center of Hurghada, steps from bustling Sheraton Road and Hurghada Marina.",
@@ -580,7 +582,7 @@
                 modal_title: "Reserve Your Room", lbl_board: "Board Plan", btn_next_step: "Next: Details", lbl_fullname: "Full Name",
                 lbl_email: "Email", lbl_phone: "Phone", lbl_total: "Total:", btn_back: "Back", btn_confirm: "Confirm Booking",
                 msg_success_title: "Booking Confirmed!", msg_success_desc: "Your reservation code:", btn_close: "Close",
-                lbl_nights: "Nights", lbl_rate: "Rate"
+                lbl_nights: "Nights", lbl_rate: "Rate", float_price: "from $45 / night"
             },
             de: {
                 nav_about: "Über uns", nav_rooms: "Zimmer", nav_amenities: "Service", nav_location: "Lage", nav_contact: "Kontakt",
@@ -589,6 +591,7 @@
                 hero_subtitle: "Erleben Sie Luxus im DEXON Roma Hotel: Privatstrand, beheizter Pool, Spa und ägyptische Gastfreundschaft.",
                 lbl_checkin: "Anreise", lbl_checkout: "Abreise", lbl_guests: "Gäste", lbl_room_type: "Kategorie", btn_check_rates: "Suchen",
                 opt_guest_1: "1 Erwachsener", opt_guest_2: "2 Erwachsene", opt_guest_3: "3 Erwachsene", opt_guest_4: "2 Erw. + 2 Kinder",
+                opt_room_std: "Standard Room (€45 / Nacht)", opt_room_sup: "Superior Sea View (€65 / Nacht)", opt_room_fam: "Family Suite (€95 / Nacht)",
                 board_all: "All Inclusive (+ $15/Tag)", board_half: "Halbpension (Frühstück/Abendessen)",
                 about_tag: "Willkommen in Hurghada", about_title_1: "Beste Lage an der", about_title_2: "Sheraton Road",
                 about_desc_1: "Das DEXON Roma Hotel liegt direkt im Zentrum von Hurghada, nur wenige Schritte von der Marina entfernt.",
@@ -613,7 +616,7 @@
                 modal_title: "Zimmer Reservieren", lbl_board: "Verpflegung", btn_next_step: "Weiter: Details", lbl_fullname: "Vollständiger Name",
                 lbl_email: "Email", lbl_phone: "Telefon", lbl_total: "Gesamt:", btn_back: "Zurück", btn_confirm: "Bestätigen",
                 msg_success_title: "Buchung Bestätigt!", msg_success_desc: "Ihr Reservierungscode:", btn_close: "Schließen",
-                lbl_nights: "Nächte", lbl_rate: "Rate"
+                lbl_nights: "Nächte", lbl_rate: "Rate", float_price: "ab $45 / Nacht"
             },
             ar: {
                 nav_about: "عن الفندق", nav_rooms: "الغرف", nav_amenities: "الخدمات", nav_location: "الموقع", nav_contact: "اتصل بنا",
@@ -622,6 +625,7 @@
                 hero_subtitle: "استمتع بإقامة فاخرة في فندق ديكسون روما: شاطئ خاص، مسبح دافئ، ومركز سبا في شارع الشيراتون.",
                 lbl_checkin: "الوصول", lbl_checkout: "المغادرة", lbl_guests: "الضيوف", lbl_room_type: "الفئة", btn_check_rates: "بحث",
                 opt_guest_1: "بالغ ١", opt_guest_2: "بالغان", opt_guest_3: "٣ بالغين", opt_guest_4: "بالغان + طفلان",
+                opt_room_std: "غرفة قياسية (45$ / ليلة)", opt_room_sup: "سوبيريور مطلة على البحر (65$ / ليلة)", opt_room_fam: "جناح عائلي (95$ / ليلة)",
                 board_all: "شامل كل الوجبات (+ ١٥$/يوم)", board_half: "إقامة نصفية (إفطار وعشاء)",
                 about_tag: "مرحباً بكم في الغردقة", about_title_1: "موقع مميز في", about_title_2: "شارع الشيراتون",
                 about_desc_1: "يقع فندق DEXON Roma في قلب مدينة الغردقة بشارع الشيراتون الشهير بالقرب من مارينا الغردقة.",
@@ -646,7 +650,7 @@
                 modal_title: "حجز غرفة", lbl_board: "خطة الوجبات", btn_next_step: "التالي: التفاصيل", lbl_fullname: "الاسم بالكامل",
                 lbl_email: "البريد الإلكتروني", lbl_phone: "رقم الهاتف", lbl_total: "الإجمالي:", btn_back: "رجوع", btn_confirm: "تأكيد الحجز",
                 msg_success_title: "تم تأكيد الحجز!", msg_success_desc: "رمز الحجز الخاص بك:", btn_close: "إغلاق",
-                lbl_nights: "الليالي", lbl_rate: "السعر"
+                lbl_nights: "الليالي", lbl_rate: "السعر", float_price: "من 45$ / ليلة"
             }
         };
 

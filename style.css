@@ -1197,3 +1197,24 @@ h1, h2, h3, .font-serif-title {
   box-sizing: border-box;
   overflow: hidden; /* Предотвращает выпадение внутренних элементов */
 }
+
+/* Исправление сетки и полей дат в модальном окне */
+.modal-step .form-group {
+  width: 100%;
+}
+
+.modal-step div[style*="grid-template-columns"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.modal-step input[type="date"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 0 8px !important;
+  font-size: 0.85rem !important;
+}
