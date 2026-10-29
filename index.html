@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+  Website designed and developed by Leo Pankratov.
+  GitHub: https://github.com/leopankrattdev
+  Behance: https://www.behance.net/c41cf120
+-->
 <html lang="ru" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -110,17 +115,19 @@
                         <label data-i18n="lbl_checkout"><i class="fa-regular fa-calendar"></i> Выезд</label>
                         <input type="date" id="hero-checkout">
                     </div>
-                    <div class="widget-field">
-                        <label data-i18n="lbl_guests"><i class="fa-solid fa-users"></i> Гости</label>
-                        <div class="select-wrapper">
-                            <select id="hero-guests">
-                                <option value="1">1 Взрослый</option>
-                                <option value="2" selected>2 Взрослых</option>
-                                <option value="3">3 Взрослых</option>
-                                <option value="4">2 Взрослых + 2 Детей</option>
-                            </select>
-                        </div>
-                    </div>
+                       
+                         <div class="widget-field">
+    <label data-i18n="lbl_guests"><i class="fa-solid fa-users"></i> Гости</label>
+    <div class="select-wrapper">
+        <select id="hero-guests">
+            <option value="1" data-i18n="opt_guest_1">1 Взрослый</option>
+            <option value="2" selected data-i18n="opt_guest_2">2 Взрослых</option>
+            <option value="3" data-i18n="opt_guest_3">3 Взрослых</option>
+            <option value="4" data-i18n="opt_guest_4">2 Взрослых + 2 Детей</option>
+        </select>
+    </div>
+</div>
+                        
                     <div class="widget-field">
                         <label data-i18n="lbl_room_type"><i class="fa-solid fa-bed"></i> Категория</label>
                         <div class="select-wrapper">
@@ -429,9 +436,9 @@
                         <div class="form-group">
                             <label data-i18n="lbl_room_type">Категория Номера</label>
                             <select class="form-control" id="modal-room" onchange="calculateModalTotal()">
-                                <option value="Standard Room" data-price="45">Standard Room ($45 / ночь)</option>
-                                <option value="Superior Sea View" data-price="65">Superior Sea View ($65 / ночь)</option>
-                                <option value="Family Suite" data-price="95">Family Suite ($95 / ночь)</option>
+                                <option value="Standard Room" data-price="45" data-i18n="opt_room_std">Standard Room ($45 / ночь)</option>
+                                <option value="Superior Sea View" data-price="65" data-i18n="opt_room_sup">Superior Sea View ($65 / ночь)</option>
+                                <option value="Family Suite" data-price="95" data-i18n="opt_room_fam">Family Suite ($95 / ночь)</option>
                             </select>
                         </div>
 
@@ -449,8 +456,8 @@
                         <div class="form-group">
                             <label data-i18n="lbl_board">План Питания</label>
                             <select class="form-control" id="modal-board" onchange="calculateModalTotal()">
-                                <option value="All Inclusive" data-extra="15">All Inclusive (+ $15/день)</option>
-                                <option value="Half Board" data-extra="0">Half Board (Завтрак/Ужин)</option>
+                                <option value="All Inclusive" data-extra="15" data-i18n="board_all">All Inclusive (+ $15/день)</option>
+                                <option value="Half Board" data-extra="0" data-i18n="board_half">Half Board (Завтрак/Ужин)</option>
                             </select>
                         </div>
 
@@ -508,13 +515,15 @@
 
     <!-- JAVASCRIPT ENGINE -->
     <script>
-        const i18n = {
+      const i18n = {
             ru: {
                 nav_about: "О нас", nav_rooms: "Номера", nav_amenities: "Услуги", nav_location: "Локация", nav_contact: "Контакты",
                 btn_book_now: "Забронировать", hero_badge: "Hurghada • Red Sea Beach Resort",
                 hero_title_1: "Ваш Тропический Оазис на", hero_title_2: "Красном Море",
                 hero_subtitle: "Роскошный отдых в DEXON Roma Hotel: собственный пляж, открытый бассейн, спа-центр и египетское гостеприимство на улице Шератон.",
                 lbl_checkin: "Заезд", lbl_checkout: "Выезд", lbl_guests: "Гости", lbl_room_type: "Категория", btn_check_rates: "Найти Номер",
+                opt_guest_1: "1 Взрослый", opt_guest_2: "2 Взрослых", opt_guest_3: "3 Взрослых", opt_guest_4: "2 Взрослых + 2 Детей",
+                board_all: "All Inclusive (+ $15/день)", board_half: "Half Board (Завтрак/Ужин)",
                 about_tag: "Добро пожаловать в Хургаду", about_title_1: "Идеальное Расположение на", about_title_2: "Sheraton Road",
                 about_desc_1: "Отель DEXON Roma расположен в самом центре Хургады, всего в нескольких шагах от проспекта Шератон, живописной марины с яхтами и лучших городских развлечений.",
                 about_desc_2: "Отель идеально сочетает динамику курортного города с умиротворяющей атмосферой пляжного отдыха. Гостей ждут уютные номера, бассейн с подогревом и гастрономическое разнообразие.",
@@ -545,6 +554,8 @@
                 hero_title_1: "Your Tropical Oasis on the", hero_title_2: "Red Sea Coast",
                 hero_subtitle: "Experience luxury at DEXON Roma Hotel: private beach, heated pool, spa center, and Egyptian hospitality on Sheraton Road.",
                 lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Guests", lbl_room_type: "Category", btn_check_rates: "Find Room",
+                opt_guest_1: "1 Adult", opt_guest_2: "2 Adults", opt_guest_3: "3 Adults", opt_guest_4: "2 Adults + 2 Children",
+                board_all: "All Inclusive (+ $15/day)", board_half: "Half Board (Breakfast/Dinner)",
                 about_tag: "Welcome to Hurghada", about_title_1: "Prime Location on", about_title_2: "Sheraton Road",
                 about_desc_1: "DEXON Roma Hotel is situated right in the center of Hurghada, steps from bustling Sheraton Road and Hurghada Marina.",
                 about_desc_2: "We offer the ideal balance between vibrant city exploration and relaxing beach vacation.",
@@ -575,6 +586,8 @@
                 hero_title_1: "Ihre Tropische Oase am", hero_title_2: "Roten Meer",
                 hero_subtitle: "Erleben Sie Luxus im DEXON Roma Hotel: Privatstrand, beheizter Pool, Spa und ägyptische Gastfreundschaft.",
                 lbl_checkin: "Anreise", lbl_checkout: "Abreise", lbl_guests: "Gäste", lbl_room_type: "Kategorie", btn_check_rates: "Suchen",
+                opt_guest_1: "1 Erwachsener", opt_guest_2: "2 Erwachsene", opt_guest_3: "3 Erwachsene", opt_guest_4: "2 Erw. + 2 Kinder",
+                board_all: "All Inclusive (+ $15/Tag)", board_half: "Halbpension (Frühstück/Abendessen)",
                 about_tag: "Willkommen in Hurghada", about_title_1: "Beste Lage an der", about_title_2: "Sheraton Road",
                 about_desc_1: "Das DEXON Roma Hotel liegt direkt im Zentrum von Hurghada, nur wenige Schritte von der Marina entfernt.",
                 about_desc_2: "Die perfekte Kombination aus Stadtleben und erholsamem Strandurlaub.",
@@ -605,6 +618,8 @@
                 hero_title_1: "واحتك الاستوائية على", hero_title_2: "شاطئ البحر الأحمر",
                 hero_subtitle: "استمتع بإقامة فاخرة في فندق ديكسون روما: شاطئ خاص، مسبح دافئ، ومركز سبا في شارع الشيراتون.",
                 lbl_checkin: "الوصول", lbl_checkout: "المغادرة", lbl_guests: "الضيوف", lbl_room_type: "الفئة", btn_check_rates: "بحث",
+                opt_guest_1: "بالغ ١", opt_guest_2: "بالغان", opt_guest_3: "٣ بالغين", opt_guest_4: "بالغان + طفلان",
+                board_all: "شامل كل الوجبات (+ ١٥$/يوم)", board_half: "إقامة نصفية (إفطار وعشاء)",
                 about_tag: "مرحباً بكم في الغردقة", about_title_1: "موقع مميز في", about_title_2: "شارع الشيراتون",
                 about_desc_1: "يقع فندق DEXON Roma في قلب مدينة الغردقة بشارع الشيراتون الشهير بالقرب من مارينا الغردقة.",
                 about_desc_2: "نوفر المزيج المثالي بين الحياة الحضرية والعطلة الشاطئية الهادئة.",
@@ -631,6 +646,7 @@
             }
         };
 
+
         // Переключение мобильного меню
         function toggleMobileDrawer() {
             document.getElementById('mobile-drawer').classList.toggle('active');
@@ -648,6 +664,7 @@
             document.getElementById('current-lang-code').innerText = lang.toUpperCase();
             document.getElementById('lang-menu').classList.remove('show');
 
+            // Перевод всех элементов с атрибутом data-i18n (включая option в select)
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (i18n[lang] && i18n[lang][key]) {
