@@ -1228,3 +1228,35 @@ h1, h2, h3, .font-serif-title {
   padding: 0 4px !important;
   font-size: 0.8rem !important;
 }
+
+/* Исправление сетки карточек номеров */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Корректное скрытие карточек при фильтрации вместо ломания верстки */
+.room-card.hidden {
+  display: none !important;
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}

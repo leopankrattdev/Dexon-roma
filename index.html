@@ -218,55 +218,59 @@
                 <button class="filter-btn" onclick="filterRooms('family', this)" data-i18n="filter_family">Семейный Люкс</button>
             </div>
 
+           <!-- Rooms Grid -->
             <div class="rooms-grid">
+                <!-- Room Card 1 -->
                 <div class="room-card" data-category="standard">
                     <div class="room-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Standard Room" class="room-img">
-                        <span class="price-badge">$45 / ночь</span>
+                        <span class="price-badge" data-i18n="price_std">$45 / night</span>
                     </div>
                     <div class="room-details">
                         <h3 class="room-title">Standard Room</h3>
-                        <p class="room-desc" data-i18n="room_std_desc">Уютный номер с кондиционером, балкон с видом на город или внутренний сад отеля.</p>
+                        <p class="room-desc" data-i18n="room_std_desc">Cozy room with air conditioning, satellite TV, and private balcony overlooking garden or city.</p>
                         <div class="room-amenities-icons">
-                            <span><i class="fa-solid fa-vector-square text-gold"></i> 28 м²</span>
-                            <span><i class="fa-solid fa-user text-gold"></i> 2 Гостя</span>
+                            <span><i class="fa-solid fa-vector-square text-gold"></i> 28 m²</span>
+                            <span><i class="fa-solid fa-user text-gold"></i> <span data-i18n="amenity_guests_2">2 Guests</span></span>
                             <span><i class="fa-solid fa-wifi text-gold"></i> Wi-Fi</span>
                         </div>
-                        <button class="btn btn-navy" onclick="quickBookRoom('Standard Room', 45)" data-i18n="btn_book_room">Забронировать</button>
+                        <button class="btn btn-navy" onclick="quickBookRoom('Standard Room', 45)" data-i18n="btn_book_room">Book This Room</button>
                     </div>
                 </div>
 
+                <!-- Room Card 2 -->
                 <div class="room-card" data-category="superior">
                     <div class="room-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Superior Sea View" class="room-img">
-                        <span class="price-badge">$65 / ночь</span>
+                        <span class="price-badge" data-i18n="price_sup">$65 / night</span>
                     </div>
                     <div class="room-details">
                         <h3 class="room-title">Superior Sea View</h3>
-                        <p class="room-desc" data-i18n="room_sup_desc">Панорамный вид на Красное море, просторный балкон и улучшенные удобства.</p>
+                        <p class="room-desc" data-i18n="room_sup_desc">Panoramic views of the Red Sea, spacious balcony, and upgraded room amenities.</p>
                         <div class="room-amenities-icons">
-                            <span><i class="fa-solid fa-vector-square text-gold"></i> 36 м²</span>
-                            <span><i class="fa-solid fa-water text-gold"></i> Вид на море</span>
-                            <span><i class="fa-solid fa-wine-glass text-gold"></i> Мини-бар</span>
+                            <span><i class="fa-solid fa-vector-square text-gold"></i> 36 m²</span>
+                            <span><i class="fa-solid fa-water text-gold"></i> <span data-i18n="amenity_seaview">Sea View</span></span>
+                            <span><i class="fa-solid fa-wine-glass text-gold"></i> <span data-i18n="amenity_minibar">Mini-bar</span></span>
                         </div>
-                        <button class="btn btn-navy" onclick="quickBookRoom('Superior Sea View', 65)" data-i18n="btn_book_room">Забронировать</button>
+                        <button class="btn btn-navy" onclick="quickBookRoom('Superior Sea View', 65)" data-i18n="btn_book_room">Book This Room</button>
                     </div>
                 </div>
 
+                <!-- Room Card 3 -->
                 <div class="room-card" data-category="family">
                     <div class="room-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Family Suite" class="room-img">
-                        <span class="price-badge">$95 / ночь</span>
+                        <span class="price-badge" data-i18n="price_fam">$95 / night</span>
                     </div>
                     <div class="room-details">
                         <h3 class="room-title">Family Suite</h3>
-                        <p class="room-desc" data-i18n="room_fam_desc">Просторный двухкомнатный номер, идеальный для семейного отдыха с детьми.</p>
+                        <p class="room-desc" data-i18n="room_fam_desc">Two separate bedrooms, perfect setup for families holidaying with children.</p>
                         <div class="room-amenities-icons">
-                            <span><i class="fa-solid fa-vector-square text-gold"></i> 54 м²</span>
-                            <span><i class="fa-solid fa-users text-gold"></i> 4 Гостя</span>
+                            <span><i class="fa-solid fa-vector-square text-gold"></i> 54 m²</span>
+                            <span><i class="fa-solid fa-users text-gold"></i> <span data-i18n="amenity_guests_4">4 Guests</span></span>
                             <span><i class="fa-solid fa-tv text-gold"></i> Smart TV</span>
                         </div>
-                        <button class="btn btn-navy" onclick="quickBookRoom('Family Suite', 95)" data-i18n="btn_book_room">Забронировать</button>
+                        <button class="btn btn-navy" onclick="quickBookRoom('Family Suite', 95)" data-i18n="btn_book_room">Book This Room</button>
                     </div>
                 </div>
             </div>
@@ -330,7 +334,7 @@
             </div>
 
             <div class="location-grid">
-                <div class="location-info-card">
+               <div class="location-info-card">
                     <div>
                         <h3 class="font-serif-title" style="color: var(--color-gold); font-size: 1.35rem; margin-bottom: 0.75rem;">DEXON Roma Hotel</h3>
                         <p style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem;">
@@ -338,9 +342,9 @@
                         </p>
                         
                         <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.8rem;">
-                            <div><strong><i class="fa-solid fa-plane text-gold"></i> Аэропорт:</strong> 10-15 минут</div>
-                            <div><strong><i class="fa-solid fa-ship text-gold"></i> Hurghada Marina:</strong> 3 минуты</div>
-                            <div><strong><i class="fa-solid fa-store text-gold"></i> Рынок Сакалла:</strong> В пешей доступности</div>
+                            <div><strong><i class="fa-solid fa-plane text-gold"></i> <span data-i18n="loc_airport_lbl">Аэропорт:</span></strong> <span data-i18n="loc_airport_val">10-15 минут</span></div>
+                            <div><strong><i class="fa-solid fa-ship text-gold"></i> Hurghada Marina:</strong> <span data-i18n="loc_marina_val">3 минуты</span></div>
+                            <div><strong><i class="fa-solid fa-store text-gold"></i> <span data-i18n="loc_market_lbl">Рынок Сакалла:</span></strong> <span data-i18n="loc_market_val">В пешей доступности</span></div>
                         </div>
                     </div>
 
@@ -515,146 +519,464 @@
 
     <!-- JAVASCRIPT ENGINE -->
     <script>
-      const i18n = {
+    const i18n = {
             ru: {
-                nav_about: "О нас", nav_rooms: "Номера", nav_amenities: "Услуги", nav_location: "Локация", nav_contact: "Контакты",
-                btn_book_now: "Забронировать", hero_badge: "Hurghada • Red Sea Beach Resort",
-                hero_title_1: "Ваш Тропический Оазис на", hero_title_2: "Красном Море",
+                // Навигация и Шапка
+                nav_about: "О нас", 
+                nav_rooms: "Номера", 
+                nav_amenities: "Услуги", 
+                nav_location: "Локация", 
+                nav_contact: "Контакты",
+                btn_book_now: "Забронировать", 
+
+                // Hero-секция
+                hero_badge: "Hurghada • Red Sea Beach Resort",
+                hero_title_1: "Ваш Тропический Оазис на", 
+                hero_title_2: "Красном Море",
                 hero_subtitle: "Роскошный отдых в DEXON Roma Hotel: собственный пляж, открытый бассейн, спа-центр и египетское гостеприимство на улице Шератон.",
-                lbl_checkin: "Заезд", lbl_checkout: "Выезд", lbl_guests: "Гости", lbl_room_type: "Категория", btn_check_rates: "Найти Номер",
-                opt_guest_1: "1 Взрослый", opt_guest_2: "2 Взрослых", opt_guest_3: "3 Взрослых", opt_guest_4: "2 Взрослых + 2 Детей",
-                opt_room_std: "Standard Room ($45 / ночь)", opt_room_sup: "Superior Sea View ($65 / ночь)", opt_room_fam: "Family Suite ($95 / ночь)",
-                board_all: "All Inclusive (+ $15/день)", board_half: "Half Board (Завтрак/Ужин)",
-                about_tag: "Добро пожаловать в Хургаду", about_title_1: "Идеальное Расположение на", about_title_2: "Sheraton Road",
+                lbl_checkin: "Заезд", 
+                lbl_checkout: "Выезд", 
+                lbl_guests: "Гости", 
+                lbl_room_type: "Категория", 
+                btn_check_rates: "Найти Номер",
+
+                // Выпадающие списки (Гости, Номера, Питание)
+                opt_guest_1: "1 Взрослый", 
+                opt_guest_2: "2 Взрослых", 
+                opt_guest_3: "3 Взрослых", 
+                opt_guest_4: "2 Взрослых + 2 Детей",
+                opt_room_std: "Standard Room ($45 / ночь)", 
+                opt_room_sup: "Superior Sea View ($65 / ночь)", 
+                opt_room_fam: "Family Suite ($95 / ночь)",
+                board_all: "All Inclusive (+ $15/день)", 
+                board_half: "Half Board (Завтрак/Ужин)",
+
+                // Секция "О нас" и Статистика
+                about_tag: "Добро пожаловать в Хургаду", 
+                about_title_1: "Идеальное Расположение на", 
+                about_title_2: "Sheraton Road",
                 about_desc_1: "Отель DEXON Roma расположен в самом центре Хургады, всего в нескольких шагах от проспекта Шератон, живописной марины с яхтами и лучших городских развлечений.",
                 about_desc_2: "Отель идеально сочетает динамику курортного города с умиротворяющей атмосферой пляжного отдыха. Гостей ждут уютные номера, бассейн с подогревом и гастрономическое разнообразие.",
-                about_badge_title: "Частный Пляж", about_badge_desc: "Прямой доступ к морю и песчаный берег", btn_explore_more: "Узнать Номера",
-                stat_rooms: "Уютных Номеров", stat_beach: "До Собственного Пляжа", stat_stars: "Премиум Сервис", stat_airport: "От Аэропорта HRG",
-                rooms_subtitle: "Комфорт и Элегантность", rooms_title: "Номера и Люксы",
-                filter_all: "Все Номера", filter_standard: "Стандарт", filter_superior: "Супериор Вид на Море", filter_family: "Семейный Люкс",
+                about_badge_title: "Частный Пляж", 
+                about_badge_desc: "Прямой доступ к морю и песчаный берег", 
+                btn_explore_more: "Узнать Номера",
+                stat_rooms: "Уютных Номеров", 
+                stat_beach: "До Собственного Пляжа", 
+                stat_stars: "Премиум Сервис", 
+                stat_airport: "От Аэропорта HRG",
+
+                // Каталог Номеров и Удобства в карточках
+                rooms_subtitle: "Комфорт и Элегантность", 
+                rooms_title: "Номера и Люксы",
+                filter_all: "Все Номера", 
+                filter_standard: "Стандарт", 
+                filter_superior: "Супериор Вид на Море", 
+                filter_family: "Семейный Люкс",
                 room_std_desc: "Уютный номер с кондиционером, балкон с видом на город или внутренний сад отеля.",
                 room_sup_desc: "Панорамный вид на Красное море, просторный балкон и улучшенные удобства.",
                 room_fam_desc: "Просторный двухкомнатный номер, идеальный для семейного отдыха с детьми.",
-                btn_book_room: "Забронировать", amenities_subtitle: "Все Для Идеального Отдыха", amenities_title: "Услуги и Развлечения",
-                am_1_title: "Частный Пляж", am_1_desc: "Собственный песчаный пляж с шезлонгами, зонтиками и безопасным входом в море.",
-                am_2_title: "Бассейн с Подогревом", am_2_desc: "Открытый бассейн с комфортной температурой воды в зимний период и аква-баром.",
-                am_3_title: "Дайвинг Центр", am_3_desc: "Погружения к коралловым рифам Красного моря с сертифицированными инструкторами.",
-                am_4_title: "All-Inclusive Ресторан", am_4_desc: "Шведский стол с блюдами международной и традиционной египетской кухни.",
-                am_5_title: "СПА & Сауна", am_5_desc: "Оздоровительные программы, тайский и восточный массаж, турецкий хаммам.",
-                am_6_title: "Высокоскоростной Wi-Fi", am_6_desc: "Бесплатный доступ к интернету в лобби и публичных зонах отеля.",
-                location_subtitle: "Сердце Курорта", location_title: "Расположение и Карта", btn_open_gmaps: "Открыть в Google Maps",
+                btn_book_room: "Забронировать", 
+                amenity_guests_2: "2 Гостя",
+                amenity_guests_4: "4 Гостя",
+                amenity_seaview: "Вид на море",
+                amenity_minibar: "Мини-бар",
+                price_std: "$45 / ночь",
+                price_sup: "$65 / ночь",
+                price_fam: "$95 / ночь",
+
+                // Секция Услуг
+                amenities_subtitle: "Все Для Идеального Отдыха", 
+                amenities_title: "Услуги и Развлечения",
+                am_1_title: "Частный Пляж", 
+                am_1_desc: "Собственный песчаный пляж с шезлонгами, зонтиками и безопасным входом в море.",
+                am_2_title: "Бассейн с Подогревом", 
+                am_2_desc: "Открытый бассейн с комфортной температурой воды в зимний период и аква-баром.",
+                am_3_title: "Дайвинг Центр", 
+                am_3_desc: "Погружения к коралловым рифам Красного моря с сертифицированными инструкторами.",
+                am_4_title: "All-Inclusive Ресторан", 
+                am_4_desc: "Шведский стол с блюдами международной и традиционной египетской кухни.",
+                am_5_title: "СПА & Сауна", 
+                am_5_desc: "Оздоровительные программы, тайский и восточный массаж, турецкий хаммам.",
+                am_6_title: "Высокоскоростной Wi-Fi", 
+                am_6_desc: "Бесплатный доступ к интернету в лобби и публичных зонах отеля.",
+
+                // Локация
+                location_subtitle: "Сердце Курорта", 
+                location_title: "Расположение и Карта", 
+                btn_open_gmaps: "Открыть в Google Maps",
+                loc_airport_lbl: "Аэропорт:",
+                loc_airport_val: "10-15 минут",
+                loc_marina_val: "3 минуты",
+                loc_market_lbl: "Рынок Сакалла:",
+                loc_market_val: "В пешей доступности",
+
+                // Подвал
                 footer_about: "Ваш идеальный отдых на побережье Красного моря с комфортом и премиальным сервисом.",
-                footer_nav: "Навигация", footer_contacts: "Контакты", footer_newsletter: "Рассылка", footer_news_desc: "Подпишитесь на спецпредложения.",
-                modal_title: "Бронирование Номера", lbl_board: "План Питания", btn_next_step: "Далее: Данные", lbl_fullname: "Имя и Фамилия",
-                lbl_email: "Email", lbl_phone: "Телефон", lbl_total: "Итого:", btn_back: "Назад", btn_confirm: "Подтвердить",
-                msg_success_title: "Бронирование Подтверждено!", msg_success_desc: "Номер вашего бронирования:", btn_close: "Закрыть",
-                lbl_nights: "Ночей", lbl_rate: "Тариф", float_price: "от $45 / ночь"
+                footer_nav: "Навигация", 
+                footer_contacts: "Контакты", 
+                footer_newsletter: "Рассылка", 
+                footer_news_desc: "Подпишитесь на спецпредложения.",
+
+                // Модальное окно и Плавающая панель
+                modal_title: "Бронирование Номера", 
+                lbl_board: "План Питания", 
+                btn_next_step: "Далее: Данные", 
+                lbl_fullname: "Имя и Фамилия",
+                lbl_email: "Email", 
+                lbl_phone: "Телефон", 
+                lbl_total: "Итого:", 
+                btn_back: "Назад", 
+                btn_confirm: "Подтвердить",
+                msg_success_title: "Бронирование Подтверждено!", 
+                msg_success_desc: "Номер вашего бронирования:", 
+                btn_close: "Закрыть",
+                lbl_nights: "Ночей", 
+                lbl_rate: "Тариф", 
+                float_price: "от $45 / ночь"
             },
             en: {
-                nav_about: "About", nav_rooms: "Rooms", nav_amenities: "Amenities", nav_location: "Location", nav_contact: "Contact",
-                btn_book_now: "Book Now", hero_badge: "Hurghada • Red Sea Beach Resort",
-                hero_title_1: "Your Tropical Oasis on the", hero_title_2: "Red Sea Coast",
+                // Navigation & Header
+                nav_about: "About", 
+                nav_rooms: "Rooms", 
+                nav_amenities: "Amenities", 
+                nav_location: "Location", 
+                nav_contact: "Contact",
+                btn_book_now: "Book Now", 
+
+                // Hero Section
+                hero_badge: "Hurghada • Red Sea Beach Resort",
+                hero_title_1: "Your Tropical Oasis on the", 
+                hero_title_2: "Red Sea Coast",
                 hero_subtitle: "Experience luxury at DEXON Roma Hotel: private beach, heated pool, spa center, and Egyptian hospitality on Sheraton Road.",
-                lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Guests", lbl_room_type: "Category", btn_check_rates: "Find Room",
-                opt_guest_1: "1 Adult", opt_guest_2: "2 Adults", opt_guest_3: "3 Adults", opt_guest_4: "2 Adults + 2 Children",
-                opt_room_std: "Standard Room ($45 / night)", opt_room_sup: "Superior Sea View ($65 / night)", opt_room_fam: "Family Suite ($95 / night)",
-                board_all: "All Inclusive (+ $15/day)", board_half: "Half Board (Breakfast/Dinner)",
-                about_tag: "Welcome to Hurghada", about_title_1: "Prime Location on", about_title_2: "Sheraton Road",
+                lbl_checkin: "Check-in", 
+                lbl_checkout: "Check-out", 
+                lbl_guests: "Guests", 
+                lbl_room_type: "Category", 
+                btn_check_rates: "Find Room",
+
+                // Dropdowns (Guests, Rooms, Meal Plans)
+                opt_guest_1: "1 Adult", 
+                opt_guest_2: "2 Adults", 
+                opt_guest_3: "3 Adults", 
+                opt_guest_4: "2 Adults + 2 Children",
+                opt_room_std: "Standard Room ($45 / night)", 
+                opt_room_sup: "Superior Sea View ($65 / night)", 
+                opt_room_fam: "Family Suite ($95 / night)",
+                board_all: "All Inclusive (+ $15/day)", 
+                board_half: "Half Board (Breakfast/Dinner)",
+
+                // About & Stats
+                about_tag: "Welcome to Hurghada", 
+                about_title_1: "Prime Location on", 
+                about_title_2: "Sheraton Road",
                 about_desc_1: "DEXON Roma Hotel is situated right in the center of Hurghada, steps from bustling Sheraton Road and Hurghada Marina.",
                 about_desc_2: "We offer the ideal balance between vibrant city exploration and relaxing beach vacation.",
-                about_badge_title: "Private Beach", about_badge_desc: "Direct sea access and sandy shoreline", btn_explore_more: "Explore Rooms",
-                stat_rooms: "Cozy Rooms", stat_beach: "To Private Beach", stat_stars: "Premium Service", stat_airport: "From Airport HRG",
-                rooms_subtitle: "Comfort & Elegance", rooms_title: "Rooms & Suites Showcase",
-                filter_all: "All Rooms", filter_standard: "Standard", filter_superior: "Superior Sea View", filter_family: "Family Suite",
+                about_badge_title: "Private Beach", 
+                about_badge_desc: "Direct sea access and sandy shoreline", 
+                btn_explore_more: "Explore Rooms",
+                stat_rooms: "Cozy Rooms", 
+                stat_beach: "To Private Beach", 
+                stat_stars: "Premium Service", 
+                stat_airport: "From Airport HRG",
+
+                // Rooms Showcase & Amenities
+                rooms_subtitle: "Comfort & Elegance", 
+                rooms_title: "Rooms & Suites Showcase",
+                filter_all: "All Rooms", 
+                filter_standard: "Standard", 
+                filter_superior: "Superior Sea View", 
+                filter_family: "Family Suite",
                 room_std_desc: "Cozy room with air conditioning, satellite TV, and private balcony overlooking garden or city.",
                 room_sup_desc: "Panoramic views of the Red Sea, spacious balcony, and upgraded room amenities.",
                 room_fam_desc: "Two separate bedrooms, perfect setup for families holidaying with children.",
-                btn_book_room: "Book This Room", amenities_subtitle: "Everything For Your Comfort", amenities_title: "Amenities & Services",
-                am_1_title: "Private Beach", am_1_desc: "Pristine private beach area with sun loungers and crystal-clear swimming spots.",
-                am_2_title: "Heated Pool", am_2_desc: "Temperature-controlled swimming pool with sunbeds and swim-up bar.",
-                am_3_title: "Diving Center", am_3_desc: "On-site diving center providing equipment rental and coral reef excursions.",
-                am_4_title: "All-Inclusive Dining", am_4_desc: "Rich buffet spreads featuring international and Egyptian specialties.",
-                am_5_title: "Spa & Wellness", am_5_desc: "Sauna, steam rooms, Turkish bath, and relaxing massage packages.",
-                am_6_title: "High-Speed Wi-Fi", am_6_desc: "Free wireless internet access in lobby and public resort areas.",
-                location_subtitle: "Resort Center", location_title: "Location & Map", btn_open_gmaps: "Open in Google Maps",
+                btn_book_room: "Book This Room", 
+                amenity_guests_2: "2 Guests",
+                amenity_guests_4: "4 Guests",
+                amenity_seaview: "Sea View",
+                amenity_minibar: "Mini-bar",
+                price_std: "$45 / night",
+                price_sup: "$65 / night",
+                price_fam: "$95 / night",
+
+                // Amenities Section
+                amenities_subtitle: "Everything For Your Comfort", 
+                amenities_title: "Amenities & Services",
+                am_1_title: "Private Beach", 
+                am_1_desc: "Pristine private beach area with sun loungers and crystal-clear swimming spots.",
+                am_2_title: "Heated Pool", 
+                am_2_desc: "Temperature-controlled swimming pool with sunbeds and swim-up bar.",
+                am_3_title: "Diving Center", 
+                am_3_desc: "On-site diving center providing equipment rental and coral reef excursions.",
+                am_4_title: "All-Inclusive Dining", 
+                am_4_desc: "Rich buffet spreads featuring international and Egyptian specialties.",
+                am_5_title: "Spa & Wellness", 
+                am_5_desc: "Sauna, steam rooms, Turkish bath, and relaxing massage packages.",
+                am_6_title: "High-Speed Wi-Fi", 
+                am_6_desc: "Free wireless internet access in lobby and public resort areas.",
+
+                // Location
+                location_subtitle: "Resort Center", 
+                location_title: "Location & Map", 
+                btn_open_gmaps: "Open in Google Maps",
+                loc_airport_lbl: "Airport:",
+                loc_airport_val: "10–15 minutes",
+                loc_marina_val: "3 minutes",
+                loc_market_lbl: "Sakalla Market:",
+                loc_market_val: "Within walking distance",
+
+                // Footer
                 footer_about: "Your memorable resort stay on the Red Sea coast in Hurghada, Egypt.",
-                footer_nav: "Navigation", footer_contacts: "Contacts", footer_newsletter: "Newsletter", footer_news_desc: "Subscribe for special rates.",
-                modal_title: "Reserve Your Room", lbl_board: "Board Plan", btn_next_step: "Next: Details", lbl_fullname: "Full Name",
-                lbl_email: "Email", lbl_phone: "Phone", lbl_total: "Total:", btn_back: "Back", btn_confirm: "Confirm Booking",
-                msg_success_title: "Booking Confirmed!", msg_success_desc: "Your reservation code:", btn_close: "Close",
-                lbl_nights: "Nights", lbl_rate: "Rate", float_price: "from $45 / night"
+                footer_nav: "Navigation", 
+                footer_contacts: "Contacts", 
+                footer_newsletter: "Newsletter", 
+                footer_news_desc: "Subscribe for special rates.",
+
+                // Modal & Floating Bar
+                modal_title: "Reserve Your Room", 
+                lbl_board: "Board Plan", 
+                btn_next_step: "Next: Details", 
+                lbl_fullname: "Full Name",
+                lbl_email: "Email", 
+                lbl_phone: "Phone", 
+                lbl_total: "Total:", 
+                btn_back: "Back", 
+                btn_confirm: "Confirm Booking",
+                msg_success_title: "Booking Confirmed!", 
+                msg_success_desc: "Your reservation code:", 
+                btn_close: "Close",
+                lbl_nights: "Nights", 
+                lbl_rate: "Rate", 
+                float_price: "from $45 / night"
             },
             de: {
-                nav_about: "Über uns", nav_rooms: "Zimmer", nav_amenities: "Service", nav_location: "Lage", nav_contact: "Kontakt",
-                btn_book_now: "Buchen", hero_badge: "Hurghada • Red Sea Beach Resort",
-                hero_title_1: "Ihre Tropische Oase am", hero_title_2: "Roten Meer",
+                // Navigation & Header
+                nav_about: "Über uns", 
+                nav_rooms: "Zimmer", 
+                nav_amenities: "Service", 
+                nav_location: "Lage", 
+                nav_contact: "Kontakt",
+                btn_book_now: "Buchen", 
+
+                // Hero Section
+                hero_badge: "Hurghada • Red Sea Beach Resort",
+                hero_title_1: "Ihre Tropische Oase am", 
+                hero_title_2: "Roten Meer",
                 hero_subtitle: "Erleben Sie Luxus im DEXON Roma Hotel: Privatstrand, beheizter Pool, Spa und ägyptische Gastfreundschaft.",
-                lbl_checkin: "Anreise", lbl_checkout: "Abreise", lbl_guests: "Gäste", lbl_room_type: "Kategorie", btn_check_rates: "Suchen",
-                opt_guest_1: "1 Erwachsener", opt_guest_2: "2 Erwachsene", opt_guest_3: "3 Erwachsene", opt_guest_4: "2 Erw. + 2 Kinder",
-                opt_room_std: "Standard Room (€45 / Nacht)", opt_room_sup: "Superior Sea View (€65 / Nacht)", opt_room_fam: "Family Suite (€95 / Nacht)",
-                board_all: "All Inclusive (+ $15/Tag)", board_half: "Halbpension (Frühstück/Abendessen)",
-                about_tag: "Willkommen in Hurghada", about_title_1: "Beste Lage an der", about_title_2: "Sheraton Road",
+                lbl_checkin: "Anreise", 
+                lbl_checkout: "Abreise", 
+                lbl_guests: "Gäste", 
+                lbl_room_type: "Kategorie", 
+                btn_check_rates: "Suchen",
+
+                // Dropdowns (Gäste, Zimmer, Verpflegung)
+                opt_guest_1: "1 Erwachsener", 
+                opt_guest_2: "2 Erwachsene", 
+                opt_guest_3: "3 Erwachsene", 
+                opt_guest_4: "2 Erw. + 2 Kinder",
+                opt_room_std: "Standard Room ($45 / Nacht)", 
+                opt_room_sup: "Superior Sea View ($65 / Nacht)", 
+                opt_room_fam: "Family Suite ($95 / Nacht)",
+                board_all: "All Inclusive (+ $15/Tag)", 
+                board_half: "Halbpension (Frühstück/Abendessen)",
+
+                // About & Stats
+                about_tag: "Willkommen in Hurghada", 
+                about_title_1: "Beste Lage an der", 
+                about_title_2: "Sheraton Road",
                 about_desc_1: "Das DEXON Roma Hotel liegt direkt im Zentrum von Hurghada, nur wenige Schritte von der Marina entfernt.",
                 about_desc_2: "Die perfekte Kombination aus Stadtleben und erholsamem Strandurlaub.",
-                about_badge_title: "Privatstrand", about_badge_desc: "Direkter Zugang zum Meer", btn_explore_more: "Zimmer Entdecken",
-                stat_rooms: "Gemütliche Zimmer", stat_beach: "Zum Privatstrand", stat_stars: "Sterne Service", stat_airport: "Vom Flughafen HRG",
-                rooms_subtitle: "Komfort & Eleganz", rooms_title: "Unsere Zimmer & Suiten",
-                filter_all: "Alle Zimmer", filter_standard: "Standard", filter_superior: "Superior Meerblick", filter_family: "Familien Suite",
+                about_badge_title: "Privatstrand", 
+                about_badge_desc: "Direkter Zugang zum Meer", 
+                btn_explore_more: "Zimmer Entdecken",
+                stat_rooms: "Gemütliche Zimmer", 
+                stat_beach: "Zum Privatstrand", 
+                stat_stars: "Sterne Service", 
+                stat_airport: "Vom Flughafen HRG",
+
+                // Rooms Showcase & Amenities
+                rooms_subtitle: "Komfort & Eleganz", 
+                rooms_title: "Unsere Zimmer & Suiten",
+                filter_all: "Alle Zimmer", 
+                filter_standard: "Standard", 
+                filter_superior: "Superior Meerblick", 
+                filter_family: "Familien Suite",
                 room_std_desc: "Gemütliches Zimmer mit Klimaanlage, Sat-TV und Balkon mit Stadt- oder Gartenblick.",
                 room_sup_desc: "Panoramablick auf das Rote Meer, großer Balkon und gehobene Ausstattung.",
                 room_fam_desc: "Zwei separate Schlafzimmer – ideal für Familien mit Kindern.",
-                btn_book_room: "Zimmer Buchen", amenities_subtitle: "Alles Für Ihren Urlaub", amenities_title: "Einrichtungen & Service",
-                am_1_title: "Privatstrand", am_1_desc: "Sauberer Privatstrand mit sanftem Einstieg ins Meer.",
-                am_2_title: "Beheizter Pool", am_2_desc: "Erfrischender Pool mit Liegestühlen und integrierter Poolbar.",
-                am_3_title: "Tauchzentrum", am_3_desc: "Hauseigenes Tauchzentrum mit Ausrüstungsverleih und Ausflügen.",
-                am_4_title: "All-Inclusive Restaurant", am_4_desc: "Reichhaltiges Buffet mit internationalen und orientalischen Gerichten.",
-                am_5_title: "Spa & Wellness", am_5_desc: "Sauna, Dampfbad und erholsame Massageanwendungen.",
-                am_6_title: "Schnelles WLAN", am_6_desc: "Kostenloser Internetzugang in öffentlichen Bereichen.",
-                location_subtitle: "Zentrum", location_title: "Lage & Karte", btn_open_gmaps: "In Google Maps öffnen",
+                btn_book_room: "Zimmer Buchen", 
+                amenity_guests_2: "2 Gäste",
+                amenity_guests_4: "4 Gäste",
+                amenity_seaview: "Meerblick",
+                amenity_minibar: "Minibar",
+                price_std: "$45 / Nacht",
+                price_sup: "$65 / Nacht",
+                price_fam: "$95 / Nacht",
+
+                // Amenities Section
+                amenities_subtitle: "Alles Für Ihren Urlaub", 
+                amenities_title: "Einrichtungen & Service",
+                am_1_title: "Privatstrand", 
+                am_1_desc: "Sauberer Privatstrand mit sanftem Einstieg ins Meer.",
+                am_2_title: "Beheizter Pool", 
+                am_2_desc: "Erfrischender Pool mit Liegestühlen und integrierter Poolbar.",
+                am_3_title: "Tauchzentrum", 
+                am_3_desc: "Hauseigenes Tauchzentrum mit Ausrüstungsverleih und Ausflügen.",
+                am_4_title: "All-Inclusive Restaurant", 
+                am_4_desc: "Reichhaltiges Buffet mit internationalen und orientalischen Gerichten.",
+                am_5_title: "Spa & Wellness", 
+                am_5_desc: "Sauna, Dampfbad und erholsame Massageanwendungen.",
+                am_6_title: "Schnelles WLAN", 
+                am_6_desc: "Kostenloser Internetzugang in öffentlichen Bereichen.",
+
+                // Location
+                location_subtitle: "Zentrum", 
+                location_title: "Lage & Karte", 
+                btn_open_gmaps: "In Google Maps öffnen",
+                loc_airport_lbl: "Flughafen:",
+                loc_airport_val: "10–15 Minuten",
+                loc_marina_val: "3 Minuten",
+                loc_market_lbl: "Sakalla Markt:",
+                loc_market_val: "In Gehweite",
+
+                // Footer
                 footer_about: "Ihr unvergesslicher Urlaub am Roten Meer in Hurghada.",
-                footer_nav: "Navigation", footer_contacts: "Kontakte", footer_newsletter: "Newsletter", footer_news_desc: "Exklusive Angebote erhalten.",
-                modal_title: "Zimmer Reservieren", lbl_board: "Verpflegung", btn_next_step: "Weiter: Details", lbl_fullname: "Vollständiger Name",
-                lbl_email: "Email", lbl_phone: "Telefon", lbl_total: "Gesamt:", btn_back: "Zurück", btn_confirm: "Bestätigen",
-                msg_success_title: "Buchung Bestätigt!", msg_success_desc: "Ihr Reservierungscode:", btn_close: "Schließen",
-                lbl_nights: "Nächte", lbl_rate: "Rate", float_price: "ab $45 / Nacht"
+                footer_nav: "Navigation", 
+                footer_contacts: "Kontakte", 
+                footer_newsletter: "Newsletter", 
+                footer_news_desc: "Exklusive Angebote erhalten.",
+
+                // Modal & Floating Bar
+                modal_title: "Zimmer Reservieren", 
+                lbl_board: "Verpflegung", 
+                btn_next_step: "Weiter: Details", 
+                lbl_fullname: "Vollständiger Name",
+                lbl_email: "Email", 
+                lbl_phone: "Telefon", 
+                lbl_total: "Gesamt:", 
+                btn_back: "Zurück", 
+                btn_confirm: "Bestätigen",
+                msg_success_title: "Buchung Bestätigt!", 
+                msg_success_desc: "Ihr Reservierungscode:", 
+                btn_close: "Schließen",
+                lbl_nights: "Nächte", 
+                lbl_rate: "Rate", 
+                float_price: "ab $45 / Nacht"
             },
             ar: {
-                nav_about: "عن الفندق", nav_rooms: "الغرف", nav_amenities: "الخدمات", nav_location: "الموقع", nav_contact: "اتصل بنا",
-                btn_book_now: "احجز الآن", hero_badge: "الغردقة • منتجع البحر الأحمر",
-                hero_title_1: "واحتك الاستوائية على", hero_title_2: "شاطئ البحر الأحمر",
+                // Навигация и Шапка
+                nav_about: "عن الفندق", 
+                nav_rooms: "الغرف", 
+                nav_amenities: "الخدمات", 
+                nav_location: "الموقع", 
+                nav_contact: "اتصل بنا",
+                btn_book_now: "احجز الآن", 
+
+                // Hero Section
+                hero_badge: "الغردقة • منتجع البحر الأحمر",
+                hero_title_1: "واحتك الاستوائية على", 
+                hero_title_2: "شاطئ البحر الأحمر",
                 hero_subtitle: "استمتع بإقامة فاخرة في فندق ديكسون روما: شاطئ خاص، مسبح دافئ، ومركز سبا في شارع الشيراتون.",
-                lbl_checkin: "الوصول", lbl_checkout: "المغادرة", lbl_guests: "الضيوف", lbl_room_type: "الفئة", btn_check_rates: "بحث",
-                opt_guest_1: "بالغ ١", opt_guest_2: "بالغان", opt_guest_3: "٣ بالغين", opt_guest_4: "بالغان + طفلان",
-                opt_room_std: "غرفة قياسية (45$ / ليلة)", opt_room_sup: "سوبيريور مطلة على البحر (65$ / ليلة)", opt_room_fam: "جناح عائلي (95$ / ليلة)",
-                board_all: "شامل كل الوجبات (+ ١٥$/يوم)", board_half: "إقامة نصفية (إفطار وعشاء)",
-                about_tag: "مرحباً بكم في الغردقة", about_title_1: "موقع مميز في", about_title_2: "شارع الشيراتون",
+                lbl_checkin: "الوصول", 
+                lbl_checkout: "المغادرة", 
+                lbl_guests: "الضيوف", 
+                lbl_room_type: "الفئة", 
+                btn_check_rates: "بحث",
+
+                // Dropdowns (الضيوف، الغرف، الوجبات)
+                opt_guest_1: "بالغ ١", 
+                opt_guest_2: "بالغان", 
+                opt_guest_3: "٣ بالغين", 
+                opt_guest_4: "بالغان + طفلان",
+                opt_room_std: "غرفة قياسية (45$ / ليلة)", 
+                opt_room_sup: "سوبيريور مطلة على البحر (65$ / ليلة)", 
+                opt_room_fam: "جناح عائلي (95$ / ليلة)",
+                board_all: "شامل كل الوجبات (+ ١٥$/يوم)", 
+                board_half: "إقامة نصفية (إفطار وعشاء)",
+
+                // About & Stats
+                about_tag: "مرحباً بكم في الغردقة", 
+                about_title_1: "موقع مميز في", 
+                about_title_2: "شارع الشيراتون",
                 about_desc_1: "يقع فندق DEXON Roma في قلب مدينة الغردقة بشارع الشيراتون الشهير بالقرب من مارينا الغردقة.",
                 about_desc_2: "نوفر المزيج المثالي بين الحياة الحضرية والعطلة الشاطئية الهادئة.",
-                about_badge_title: "شاطئ خاص", about_badge_desc: "دخول مباشر للبحر", btn_explore_more: "استكشف الغرف",
-                stat_rooms: "غرف مريحة", stat_beach: "إلى الشاطئ الخاص", stat_stars: "خدمة فاخرة", stat_airport: "من مطار الغردقة",
-                rooms_subtitle: "راحة وأناقة", rooms_title: "الغرف والأجنحة",
-                filter_all: "الكل", filter_standard: "قياسية", filter_superior: "سوبيريور مطلة على البحر", filter_family: "جناح عائلي",
+                about_badge_title: "شاطئ خاص", 
+                about_badge_desc: "دخول مباشر للبحر", 
+                btn_explore_more: "استكشف الغرف",
+                stat_rooms: "غرف مريحة", 
+                stat_beach: "إلى الشاطئ الخاص", 
+                stat_stars: "خدمة فاخرة", 
+                stat_airport: "من مطار الغردقة",
+
+                // Rooms Showcase & Amenities
+                rooms_subtitle: "راحة وأناقة", 
+                rooms_title: "الغرف والأجنحة",
+                filter_all: "الكل", 
+                filter_standard: "قياسية", 
+                filter_superior: "سوبيريور مطلة على البحر", 
+                filter_family: "جناح عائلي",
                 room_std_desc: "غرفة مريحة تشتمل على تكييف، تلفزيون وشرفة مع إطلالة جميلة.",
                 room_sup_desc: "إطلالة بانورامية على البحر الأحمر مع شرفة واسعة ومستلزمات راقية.",
                 room_fam_desc: "غرفتا نوم منفصلتان، خيار مثالي للعائلات مع الأطفال.",
-                btn_book_room: "حجز الغرفة", amenities_subtitle: "كل ما تحتاجه لعطلة مثالية", amenities_title: "الخدمات والمرافق",
-                am_1_title: "شاطئ خاص", am_1_desc: "منطقة شاطئية خاصة ونظيفة مع أدوات شاطئية مجانية.",
-                am_2_title: "مسبح دافئ", am_2_desc: "حمام سباحة مفتوق مزود بكراسي استلقاء وبار يقدم المشروبات.",
-                am_3_title: "مركز غوص", am_3_desc: "مركز غوص متكامل لتأجير المعدات ورحلات استكشاف الشعاب المرجانية.",
-                am_4_title: "مطعم شامل", am_4_desc: "بوفيه غني بأشهى المأكولات العالمية والشرقية.",
-                am_5_title: "سبا وعافية", am_5_desc: "ساونا، حمام بخار، حمام تركي وجلسات مساج هادئة.",
-                am_6_title: "إنترنت سريع", am_6_desc: "إنترنت مجاني في الأماكن العامة بالفندق.",
-                location_subtitle: "قلب المنتجع", location_title: "الموقع والخريطة", btn_open_gmaps: "فتح في خرائط جوجل",
+                btn_book_room: "حجز الغرفة", 
+                amenity_guests_2: "ضيوف 2",
+                amenity_guests_4: "ضيوف 4",
+                amenity_seaview: "إطلالة على البحر",
+                amenity_minibar: "مینی بار",
+                price_std: "45$ / ليلة",
+                price_sup: "65$ / ليلة",
+                price_fam: "95$ / ليلة",
+
+                // Amenities Section
+                amenities_subtitle: "كل ما تحتاجه لعطلة مثالية", 
+                amenities_title: "الخدمات والمرافق",
+                am_1_title: "شاطئ خاص", 
+                am_1_desc: "منطقة شاطئية خاصة ونظيفة مع أدوات شاطئية مجانية.",
+                am_2_title: "مسبح دافئ", 
+                am_2_desc: "حمام سباحة مفتوق مزود بكراسي استلقاء وبار يقدم المشروبات.",
+                am_3_title: "مركز غوص", 
+                am_3_desc: "مركز غوص متكامل لتأجير المعدات ورحلات استكشاف الشعاب المرجانية.",
+                am_4_title: "مطعم شامل", 
+                am_4_desc: "بوفيه غني بأشهى المأكولات العالمية والشرقية.",
+                am_5_title: "سبا وعافية", 
+                am_5_desc: "ساونا، حمام بخار، حمام تركي وجلسات مساج هادئة.",
+                am_6_title: "إنترنت سريع", 
+                am_6_desc: "إنترنت مجاني في الأماكن العامة بالفندق.",
+
+                // Location
+                location_subtitle: "قلب المنتجع", 
+                location_title: "الموقع والخريطة", 
+                btn_open_gmaps: "فتح في خرائط جوجل",
+                loc_airport_lbl: "المطار:",
+                loc_airport_val: "10-15 دقيقة",
+                loc_marina_val: "3 دقائق",
+                loc_market_lbl: "سوق السقالة:",
+                loc_market_val: "على بعد مسافة قريبة سيرًا على الأقدام",
+
+                // Footer
                 footer_about: "إقامتك المميزة وغير المنسية على ساحل البحر الأحمر بالغردقة.",
-                footer_nav: "التنقل", footer_contacts: "التواصل", footer_newsletter: "النشرة البريدية", footer_news_desc: "اشترك للحصول على خصومات.",
-                modal_title: "حجز غرفة", lbl_board: "خطة الوجبات", btn_next_step: "التالي: التفاصيل", lbl_fullname: "الاسم بالكامل",
-                lbl_email: "البريد الإلكتروني", lbl_phone: "رقم الهاتف", lbl_total: "الإجمالي:", btn_back: "رجوع", btn_confirm: "تأكيد الحجز",
-                msg_success_title: "تم تأكيد الحجز!", msg_success_desc: "رمز الحجز الخاص بك:", btn_close: "إغلاق",
-                lbl_nights: "الليالي", lbl_rate: "السعر", float_price: "من 45$ / ليلة"
+                footer_nav: "التنقل", 
+                footer_contacts: "التواصل", 
+                footer_newsletter: "النشرة البريدية", 
+                footer_news_desc: "اشترك للحصول على خصومات.",
+
+                // Modal & Floating Bar
+                modal_title: "حجز غرفة", 
+                lbl_board: "خطة الوجبات", 
+                btn_next_step: "التالي: التفاصيل", 
+                lbl_fullname: "الاسم بالكامل",
+                lbl_email: "البريد الإلكتروني", 
+                lbl_phone: "رقم الهاتف", 
+                lbl_total: "الإجمالي:", 
+                btn_back: "رجوع", 
+                btn_confirm: "تأكيد الحجز",
+                msg_success_title: "تم تأكيد الحجز!", 
+                msg_success_desc: "رمز الحجز الخاص بك:", 
+                btn_close: "إغلاق",
+                lbl_nights: "الليالي", 
+                lbl_rate: "السعر", 
+                float_price: "من 45$ / ليلة"
             }
         };
-
-
 
 
         // Переключение мобильного меню
@@ -683,18 +1005,20 @@
             });
         }
 
-        function filterRooms(category, btn) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+        function filterRooms(category, btnElement) {
+    // Убираем активный класс у кнопок фильтра
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (btnElement) btnElement.classList.add('active');
 
-            document.querySelectorAll('.room-card').forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+    // Показываем/скрываем карточки
+    document.querySelectorAll('.room-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
         }
+    });
+}
 
         function openBookingModal() {
             document.getElementById('booking-modal').classList.add('open');
