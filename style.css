@@ -1138,3 +1138,62 @@ h1, h2, h3, .font-serif-title {
     display: none !important;
   }
 }
+
+/* 1. Сброс и фиксация инпутов (особенно для Safari/iOS) */
+.widget-field input[type="date"],
+.widget-field select {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 48px;
+  padding: 0 12px;
+  margin: 0;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm, 8px);
+  background-color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--color-text-dark, #1E293B);
+}
+
+/* Избавляемся от наплыва текста и вылезания на iOS Safari */
+.widget-field input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  line-height: 48px;
+}
+
+/* 2. Позиционирование и отступы шапки (Navbar) */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+.navbar .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 16px;
+}
+
+/* 3. Отступ сверху для Hero-секции, чтобы заголовок не наезжал под шапку */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding-top: 2rem !important; /* Корректный отступ от шапки */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 4. Адаптивность контейнера формы */
+.booking-widget {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* Предотвращает выпадение внутренних элементов */
+}
